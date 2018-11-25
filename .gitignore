@@ -4,6 +4,7 @@ build/*
 */build/*
 */.gradle/
 */.gradle/*
+*/.idea/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
