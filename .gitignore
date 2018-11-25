@@ -1,7 +1,9 @@
 # Xcode
 build/*
 */build/
-*/2.10/
+*/build/*
+*/.gradle/
+*/.gradle/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
