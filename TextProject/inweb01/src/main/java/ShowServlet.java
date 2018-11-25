@@ -12,7 +12,7 @@ public class ShowServlet extends HttpServlet {
 
     public void doGet (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         PrintWriter out = res.getWriter();
-        out.print("Hello Gradle");
+        out.print("Hello Gradle3333");
         out.close();
     }
 }
