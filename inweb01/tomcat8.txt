@@ -1,0 +1,27 @@
+  446  2018-11-26 08:55:16 sudo apt install tomcat8
+
+  450  2018-11-26 08:56:50 gradle war
+  451  2018-11-26 08:57:04 ls
+  452  2018-11-26 08:57:15 ls build/libs/inweb01-1.0-SNAPSHOT.war
+  453  2018-11-26 08:59:38 cp build/libs/inweb01-1.0-SNAPSHOT.war /var/lib/tomcat8/webapps/
+  454  2018-11-26 08:59:51 sudo cp build/libs/inweb01-1.0-SNAPSHOT.war /var/lib/tomcat8/webapps/
+  455  2018-11-26 09:00:05 sudo service tomcat8 start
+  456  2018-11-26 09:01:22 cat build.gradle
+  457  2018-11-26 09:03:41 vim build.gradle
+
+
+  cat cocoa/inweb01/build.gradle
+  version ''
+
+
+  458  2018-11-26 09:03:58 gralde war
+  459  2018-11-26 09:04:02 gradle war
+  460  2018-11-26 09:04:23 ls build/libs/inweb01.war
+  461  2018-11-26 09:04:38 sudo cp build/libs/inweb01.war /var/lib/tomcat8/webapps/
+  462  2018-11-26 09:05:06 sudo rm -rf /var/lib/tomcat8/webapps/inweb01-1.0-SNAPSHOT*
+  463  2018-11-26 09:05:17 ls /var/lib/tomcat8/webapps/
+
+
+  curl -voa http://119.29.108.104:8080/inweb01/kotlin.mp4 -H "Range:bytes=0-1"
+
+  
