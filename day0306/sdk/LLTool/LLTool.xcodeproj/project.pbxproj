@@ -26,6 +26,14 @@
 		042C445421C39536005E1671 /* LLColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C445221C39536005E1671 /* LLColorView.m */; };
 		044110DA21ED6D80006FB01D /* LLCertHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 044110D821ED6D80006FB01D /* LLCertHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		044110DB21ED6D80006FB01D /* LLCertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 044110D921ED6D80006FB01D /* LLCertHelper.m */; };
+		04E212CC222F71E700EC8ED7 /* LLSettingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E212CA222F71E700EC8ED7 /* LLSettingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E212CD222F71E700EC8ED7 /* LLSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E212CB222F71E700EC8ED7 /* LLSettingView.m */; };
+		04E212CF222F740600EC8ED7 /* LLPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 04E212CE222F740600EC8ED7 /* LLPrefixHeader.pch */; };
+		04E212D5222F7B3D00EC8ED7 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E212D1222F7B3D00EC8ED7 /* UILabel+Extension.m */; };
+		04E212D6222F7B3D00EC8ED7 /* UIButton+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E212D2222F7B3D00EC8ED7 /* UIButton+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E212D7222F7B3D00EC8ED7 /* UILabel+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E212D3222F7B3D00EC8ED7 /* UILabel+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E212D8222F7B3D00EC8ED7 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E212D4222F7B3D00EC8ED7 /* UIButton+Extension.m */; };
+		04E212DB222F878D00EC8ED7 /* Macro.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E212DA222F874900EC8ED7 /* Macro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,14 @@
 		042C445221C39536005E1671 /* LLColorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLColorView.m; sourceTree = "<group>"; };
 		044110D821ED6D80006FB01D /* LLCertHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCertHelper.h; sourceTree = "<group>"; };
 		044110D921ED6D80006FB01D /* LLCertHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCertHelper.m; sourceTree = "<group>"; };
+		04E212CA222F71E700EC8ED7 /* LLSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSettingView.h; sourceTree = "<group>"; };
+		04E212CB222F71E700EC8ED7 /* LLSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSettingView.m; sourceTree = "<group>"; };
+		04E212CE222F740600EC8ED7 /* LLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPrefixHeader.pch; sourceTree = "<group>"; };
+		04E212D1222F7B3D00EC8ED7 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		04E212D2222F7B3D00EC8ED7 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		04E212D3222F7B3D00EC8ED7 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		04E212D4222F7B3D00EC8ED7 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		04E212DA222F874900EC8ED7 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +85,16 @@
 		042C444821C394DE005E1671 /* LLTool */ = {
 			isa = PBXGroup;
 			children = (
+				04E212D0222F7B3D00EC8ED7 /* Category */,
 				042C444921C394DE005E1671 /* LLTool.h */,
 				042C445121C39536005E1671 /* LLColorView.h */,
 				042C445221C39536005E1671 /* LLColorView.m */,
+				04E212CA222F71E700EC8ED7 /* LLSettingView.h */,
+				04E212CB222F71E700EC8ED7 /* LLSettingView.m */,
 				044110D821ED6D80006FB01D /* LLCertHelper.h */,
 				044110D921ED6D80006FB01D /* LLCertHelper.m */,
+				04E212DA222F874900EC8ED7 /* Macro.h */,
+				04E212CE222F740600EC8ED7 /* LLPrefixHeader.pch */,
 				042C444A21C394DE005E1671 /* Info.plist */,
 			);
 			path = LLTool;
@@ -86,6 +107,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		04E212D0222F7B3D00EC8ED7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				04E212D3222F7B3D00EC8ED7 /* UILabel+Extension.h */,
+				04E212D1222F7B3D00EC8ED7 /* UILabel+Extension.m */,
+				04E212D2222F7B3D00EC8ED7 /* UIButton+Extension.h */,
+				04E212D4222F7B3D00EC8ED7 /* UIButton+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,8 +126,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				042C444B21C394DE005E1671 /* LLTool.h in Headers */,
+				04E212D6222F7B3D00EC8ED7 /* UIButton+Extension.h in Headers */,
+				04E212D7222F7B3D00EC8ED7 /* UILabel+Extension.h in Headers */,
+				04E212CC222F71E700EC8ED7 /* LLSettingView.h in Headers */,
 				044110DA21ED6D80006FB01D /* LLCertHelper.h in Headers */,
 				042C445321C39536005E1671 /* LLColorView.h in Headers */,
+				04E212DB222F878D00EC8ED7 /* Macro.h in Headers */,
+				04E212CF222F740600EC8ED7 /* LLPrefixHeader.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E212D8222F7B3D00EC8ED7 /* UIButton+Extension.m in Sources */,
+				04E212D5222F7B3D00EC8ED7 /* UILabel+Extension.m in Sources */,
+				04E212CD222F71E700EC8ED7 /* LLSettingView.m in Sources */,
 				042C445421C39536005E1671 /* LLColorView.m in Sources */,
 				044110DB21ED6D80006FB01D /* LLCertHelper.m in Sources */,
 			);
@@ -324,6 +364,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = ./LLTool/LLPrefixHeader.pch;
 				INFOPLIST_FILE = LLTool/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -333,6 +374,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.LLTool;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -350,6 +392,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = ./LLTool/LLPrefixHeader.pch;
 				INFOPLIST_FILE = LLTool/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -359,6 +402,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.LLTool;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

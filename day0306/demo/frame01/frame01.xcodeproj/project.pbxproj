@@ -14,6 +14,8 @@
 		042C446E21C39582005E1671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042C446C21C39582005E1671 /* LaunchScreen.storyboard */; };
 		042C447121C39582005E1671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C447021C39582005E1671 /* main.m */; };
 		044CC96321D5D74900D41611 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044CC96121D5D74900D41611 /* Security.framework */; };
+		04E212E5222F9BA500EC8ED7 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E212E0222F9BA500EC8ED7 /* UILabel+Extension.m */; };
+		04E212E6222F9BA500EC8ED7 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E212E3222F9BA500EC8ED7 /* UIButton+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		042C447021C39582005E1671 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		044CC96121D5D74900D41611 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		04E212BE222F6D0500EC8ED7 /* LLTool.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LLTool.xcodeproj; path = ../../../sdk/LLTool/LLTool.xcodeproj; sourceTree = "<group>"; };
+		04E212E0222F9BA500EC8ED7 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		04E212E1222F9BA500EC8ED7 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		04E212E2222F9BA500EC8ED7 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		04E212E3222F9BA500EC8ED7 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		042C446021C3957D005E1671 /* frame01 */ = {
 			isa = PBXGroup;
 			children = (
+				04E212DF222F9BA500EC8ED7 /* Category */,
 				04E212BE222F6D0500EC8ED7 /* LLTool.xcodeproj */,
 				042C446121C3957D005E1671 /* AppDelegate.h */,
 				042C446221C3957D005E1671 /* AppDelegate.m */,
@@ -108,6 +115,17 @@
 				04E212C4222F6D0500EC8ED7 /* LLTool.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		04E212DF222F9BA500EC8ED7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				04E212E0222F9BA500EC8ED7 /* UILabel+Extension.m */,
+				04E212E1222F9BA500EC8ED7 /* UIButton+Extension.h */,
+				04E212E2222F9BA500EC8ED7 /* UILabel+Extension.h */,
+				04E212E3222F9BA500EC8ED7 /* UIButton+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E212E6222F9BA500EC8ED7 /* UIButton+Extension.m in Sources */,
+				04E212E5222F9BA500EC8ED7 /* UILabel+Extension.m in Sources */,
 				042C446621C3957D005E1671 /* ViewController.m in Sources */,
 				042C447121C39582005E1671 /* main.m in Sources */,
 				042C446321C3957D005E1671 /* AppDelegate.m in Sources */,
@@ -354,9 +374,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.frame01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,9 +392,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.frame01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
