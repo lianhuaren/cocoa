@@ -44,7 +44,7 @@
     
     CGRect frame = self.settingView.frame;
     frame.origin.x = SCREEN_WIDTH-AC_WIDTH_FIT(44+15);
-    
+    frame.origin.y = AC_WIDTH_FIT(135+44);
     self.settingView.frame = frame;
 }
 
