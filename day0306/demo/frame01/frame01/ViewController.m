@@ -33,9 +33,9 @@
     
     LLSettingViewAdapter *adapter = [[LLSettingViewAdapter alloc] init];
     __weak typeof(self) weakSelf = self;
-    adapter.settingButtonClickBlock = ^(UIButton *button, int style) {
+    adapter.settingButtonClickBlock = ^(UIButton *button, int tag) {
         
-//        [weakSelf settingBtnClick:button style:style];
+        [weakSelf settingBtnClick:button tag:tag];
     };
     
     
@@ -52,6 +52,31 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)settingBtnClick:(UIButton *)button tag:(int)tag
+{
+    NSLog(@"settingBtnClick tag:%d",tag);
+    switch (tag) {
+        case LLSettingViewTag1:
+        {
+            
+        }
+            break;
+        case LLSettingViewTag2:
+        {
+            
+        }
+            break;
+        case LLSettingViewTag3:
+        {
+            
+        }
+            break;
+
+        default:
+            break;
+    }
 }
 
 - (LLSettingView *)settingView {
