@@ -28,6 +28,20 @@
 //
 //    [self.view addSubview:colorView];
 
+    //未定义requestId
+    NSTimeInterval nowtime = [[NSDate date] timeIntervalSince1970]*1000;
+    NSString *date = [NSString stringWithFormat:@"%llu", [[NSNumber numberWithDouble:nowtime] longLongValue]];
+    NSString *part1 = @"";//2位
+    NSString *part2 = @"";//3位
+    if (date.length > 3) {
+        part1 = [date substringToIndex:2];
+        part2 = [date substringFromIndex:date.length-3];
+    }
+    //8位
+    NSString *requestId = [NSString stringWithFormat:@"%@%@%3d",part1,part2,(arc4random() % 1000)];
+    
+    NSLog(@">>>>>>>>>%@",requestId);
+    
     self.settingView.backgroundColor = [UIColor clearColor];
     
     
@@ -46,6 +60,12 @@
     frame.origin.x = SCREEN_WIDTH-AC_WIDTH_FIT(44+15);
     frame.origin.y = AC_WIDTH_FIT(135+44);
     self.settingView.frame = frame;
+    
+    
+    [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        NSLog(@">>>>>>>>>test");
+    }];
 }
 
 
