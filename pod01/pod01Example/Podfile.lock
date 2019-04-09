@@ -1,0 +1,23 @@
+PODS:
+  - MRLogicInjection (1.0.0)
+  - Pod01Components (0.1.0):
+    - MRLogicInjection
+
+DEPENDENCIES:
+  - Pod01Components (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MRLogicInjection
+
+EXTERNAL SOURCES:
+  Pod01Components:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MRLogicInjection: 143a37e6158fd75614325b02ba3acff412e9ddbb
+  Pod01Components: ccff44d56adaa45126b9e765619d35f55fb9fe64
+
+PODFILE CHECKSUM: 753af76a49ffe76141097d1d451beeba2c0d33b1
+
+COCOAPODS: 1.5.3

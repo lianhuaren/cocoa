@@ -1,0 +1,7 @@
+use_frameworks!
+
+target 'pod01Example' do
+  pod 'Pod01Components', :path => '../'
+
+
+end
