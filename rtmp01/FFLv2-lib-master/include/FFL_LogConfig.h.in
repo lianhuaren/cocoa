@@ -1,0 +1,27 @@
+/*
+*  This file is part of FFL project.
+*
+*  The MIT License (MIT)
+*  Copyright (C) 2017-2018 zhufeifei All rights reserved.
+*
+*  FFL_LogConfig.h   
+*  Created by zhufeifei(34008081@qq.com) on 2019/1/4
+*  https://github.com/zhenfei2016/FFLv2-lib.git
+*
+*  cmake生成的日志宏
+*
+*/
+#ifndef __FFL_LOG_CONFIG_H__
+#define __FFL_LOG_CONFIG_H__
+
+${FFL_LOG_CRIT}
+
+${FFL_LOG_ERROR}
+
+${FFL_LOG_WARING}
+
+${FFL_LOG_INFO}
+
+${FFL_LOG_DEBUG}
+
+#endif
