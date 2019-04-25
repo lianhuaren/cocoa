@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04CCCD432271C31800E6C2F4 /* VCPreviewView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CCCD412271C31800E6C2F4 /* VCPreviewView.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		14055D671ED5B007004CA780 /* VideoCaptureDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D551ED5B007004CA780 /* VideoCaptureDevice.m */; };
+		14055D681ED5B007004CA780 /* LivingConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D581ED5B007004CA780 /* LivingConfigModel.m */; };
+		14055D691ED5B007004CA780 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D5B1ED5B007004CA780 /* ImageUtils.m */; };
+		14055D6A1ED5B007004CA780 /* DetectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D5E1ED5B007004CA780 /* DetectionViewController.m */; };
+		14055D6B1ED5B007004CA780 /* FaceBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D601ED5B007004CA780 /* FaceBaseViewController.m */; };
+		14055D6C1ED5B007004CA780 /* LivenessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D621ED5B007004CA780 /* LivenessViewController.m */; };
+		14055D6D1ED5B007004CA780 /* LivingConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D641ED5B007004CA780 /* LivingConfigViewController.m */; };
+		14055D721ED5B04D004CA780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D701ED5B04D004CA780 /* AppDelegate.m */; };
+		14055D731ED5B04D004CA780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14055D711ED5B04D004CA780 /* main.m */; };
+		5D0658B61EC97AAA00FA6E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D0658B41EC97AAA00FA6E8E /* Main.storyboard */; };
+		5D0658B81EC97AAA00FA6E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0658B71EC97AAA00FA6E8E /* Assets.xcassets */; };
+		5D0658BB1EC97AAA00FA6E8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D0658B91EC97AAA00FA6E8E /* LaunchScreen.storyboard */; };
+		5D2A16921F57F7B8000DCED7 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A16911F57F7B8000DCED7 /* CircleView.m */; };
+		5D2C32731F20B0C9000A5B71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2C32721F20B0C9000A5B71 /* ViewController.m */; };
+		5D89945A1F5E7FE8006663BC /* RemindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8994591F5E7FE8006663BC /* RemindView.m */; };
+		5D8C1FCE1ED73B6B0036C63A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8C1FCD1ED73B6B0036C63A /* libc++.tbd */; };
+		DA728DDE21A6A5D100F4C565 /* IDLFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA728DDA21A6A5D100F4C565 /* IDLFaceSDK.framework */; };
+		DA728DDF21A6A5D100F4C565 /* idl-license.face-ios in Resources */ = {isa = PBXBuildFile; fileRef = DA728DDB21A6A5D100F4C565 /* idl-license.face-ios */; };
+		DA728DE021A6A5D100F4C565 /* com.baidu.idl.face.model.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA728DDC21A6A5D100F4C565 /* com.baidu.idl.face.model.bundle */; };
+		DA728DE121A6A5D100F4C565 /* com.baidu.idl.face.faceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA728DDD21A6A5D100F4C565 /* com.baidu.idl.face.faceSDK.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04CCCD412271C31800E6C2F4 /* VCPreviewView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VCPreviewView.mm; sourceTree = "<group>"; };
+		04CCCD422271C31800E6C2F4 /* VCPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCPreviewView.h; sourceTree = "<group>"; };
+		04CCCD442271C35700E6C2F4 /* GLESUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtil.h; sourceTree = "<group>"; };
+		04CCCD452271C3AA00E6C2F4 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		14055D541ED5B007004CA780 /* VideoCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureDevice.h; sourceTree = "<group>"; };
+		14055D551ED5B007004CA780 /* VideoCaptureDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureDevice.m; sourceTree = "<group>"; };
+		14055D571ED5B007004CA780 /* LivingConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingConfigModel.h; sourceTree = "<group>"; };
+		14055D581ED5B007004CA780 /* LivingConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingConfigModel.m; sourceTree = "<group>"; };
+		14055D5A1ED5B007004CA780 /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
+		14055D5B1ED5B007004CA780 /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
+		14055D5D1ED5B007004CA780 /* DetectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectionViewController.h; sourceTree = "<group>"; };
+		14055D5E1ED5B007004CA780 /* DetectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectionViewController.m; sourceTree = "<group>"; };
+		14055D5F1ED5B007004CA780 /* FaceBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBaseViewController.h; sourceTree = "<group>"; };
+		14055D601ED5B007004CA780 /* FaceBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBaseViewController.m; sourceTree = "<group>"; };
+		14055D611ED5B007004CA780 /* LivenessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivenessViewController.h; sourceTree = "<group>"; };
+		14055D621ED5B007004CA780 /* LivenessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivenessViewController.m; sourceTree = "<group>"; };
+		14055D631ED5B007004CA780 /* LivingConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingConfigViewController.h; sourceTree = "<group>"; };
+		14055D641ED5B007004CA780 /* LivingConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingConfigViewController.m; sourceTree = "<group>"; };
+		14055D651ED5B007004CA780 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		14055D6F1ED5B04D004CA780 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Supporting Files/AppDelegate.h"; sourceTree = "<group>"; };
+		14055D701ED5B04D004CA780 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Supporting Files/AppDelegate.m"; sourceTree = "<group>"; };
+		14055D711ED5B04D004CA780 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		14649F271F8F40ED00B0FA8B /* FaceParameterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceParameterConfig.h; sourceTree = "<group>"; };
+		14699D431F8F907500195ED3 /* IDLFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDLFaceSDK.framework; path = FaceSDK/IDLFaceSDK.framework; sourceTree = "<group>"; };
+		5D0658A81EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceSDK-Collect-WithLiveness-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0658B51EC97AAA00FA6E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D0658B71EC97AAA00FA6E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D0658BA1EC97AAA00FA6E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D0658BC1EC97AAA00FA6E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D2A16901F57F7B8000DCED7 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		5D2A16911F57F7B8000DCED7 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		5D2C32721F20B0C9000A5B71 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5D8994581F5E7FE8006663BC /* RemindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindView.h; sourceTree = "<group>"; };
+		5D8994591F5E7FE8006663BC /* RemindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindView.m; sourceTree = "<group>"; };
+		5D8C1FCD1ED73B6B0036C63A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DA728DDA21A6A5D100F4C565 /* IDLFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDLFaceSDK.framework; path = "FaceSDK-Collect-WithLiveness-iOS/Frameworks/FaceSDK/IDLFaceSDK.framework"; sourceTree = SOURCE_ROOT; };
+		DA728DDB21A6A5D100F4C565 /* idl-license.face-ios */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "idl-license.face-ios"; path = "FaceSDK-Collect-WithLiveness-iOS/Frameworks/FaceSDK/idl-license.face-ios"; sourceTree = SOURCE_ROOT; };
+		DA728DDC21A6A5D100F4C565 /* com.baidu.idl.face.model.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.baidu.idl.face.model.bundle; path = "FaceSDK-Collect-WithLiveness-iOS/Frameworks/FaceSDK/com.baidu.idl.face.model.bundle"; sourceTree = SOURCE_ROOT; };
+		DA728DDD21A6A5D100F4C565 /* com.baidu.idl.face.faceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = com.baidu.idl.face.faceSDK.bundle; path = "FaceSDK-Collect-WithLiveness-iOS/Frameworks/FaceSDK/com.baidu.idl.face.faceSDK.bundle"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D0658A51EC97AAA00FA6E8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA728DDE21A6A5D100F4C565 /* IDLFaceSDK.framework in Frameworks */,
+				5D8C1FCE1ED73B6B0036C63A /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14055D531ED5B007004CA780 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04CCCD452271C3AA00E6C2F4 /* util.h */,
+				04CCCD442271C35700E6C2F4 /* GLESUtil.h */,
+				04CCCD422271C31800E6C2F4 /* VCPreviewView.h */,
+				04CCCD412271C31800E6C2F4 /* VCPreviewView.mm */,
+				14055D541ED5B007004CA780 /* VideoCaptureDevice.h */,
+				14055D551ED5B007004CA780 /* VideoCaptureDevice.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		14055D561ED5B007004CA780 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14055D571ED5B007004CA780 /* LivingConfigModel.h */,
+				14055D581ED5B007004CA780 /* LivingConfigModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14055D591ED5B007004CA780 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				14055D5A1ED5B007004CA780 /* ImageUtils.h */,
+				14055D5B1ED5B007004CA780 /* ImageUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		14055D5C1ED5B007004CA780 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				14055D5F1ED5B007004CA780 /* FaceBaseViewController.h */,
+				14055D601ED5B007004CA780 /* FaceBaseViewController.m */,
+				14055D5D1ED5B007004CA780 /* DetectionViewController.h */,
+				14055D5E1ED5B007004CA780 /* DetectionViewController.m */,
+				14055D611ED5B007004CA780 /* LivenessViewController.h */,
+				14055D621ED5B007004CA780 /* LivenessViewController.m */,
+				14055D631ED5B007004CA780 /* LivingConfigViewController.h */,
+				14055D641ED5B007004CA780 /* LivingConfigViewController.m */,
+				5D2A16901F57F7B8000DCED7 /* CircleView.h */,
+				5D2A16911F57F7B8000DCED7 /* CircleView.m */,
+				5D8994581F5E7FE8006663BC /* RemindView.h */,
+				5D8994591F5E7FE8006663BC /* RemindView.m */,
+				14055D651ED5B007004CA780 /* ViewController.h */,
+				5D2C32721F20B0C9000A5B71 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		143F503A1ED4161F00D39FEB /* FaceSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DA728DDD21A6A5D100F4C565 /* com.baidu.idl.face.faceSDK.bundle */,
+				DA728DDC21A6A5D100F4C565 /* com.baidu.idl.face.model.bundle */,
+				DA728DDB21A6A5D100F4C565 /* idl-license.face-ios */,
+				DA728DDA21A6A5D100F4C565 /* IDLFaceSDK.framework */,
+			);
+			path = FaceSDK;
+			sourceTree = "<group>";
+		};
+		5D06589F1EC97AAA00FA6E8E = {
+			isa = PBXGroup;
+			children = (
+				143F503A1ED4161F00D39FEB /* FaceSDK */,
+				5D0658AA1EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS */,
+				5D0658A91EC97AAA00FA6E8E /* Products */,
+				5D8C1FC21ED72E330036C63A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D0658A91EC97AAA00FA6E8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D0658A81EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D0658AA1EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				14649F271F8F40ED00B0FA8B /* FaceParameterConfig.h */,
+				5D0658B71EC97AAA00FA6E8E /* Assets.xcassets */,
+				14055D531ED5B007004CA780 /* Core */,
+				14055D561ED5B007004CA780 /* Model */,
+				5D0658AB1EC97AAA00FA6E8E /* Supporting Files */,
+				14055D591ED5B007004CA780 /* Utils */,
+				14055D5C1ED5B007004CA780 /* ViewController */,
+			);
+			path = "FaceSDK-Collect-WithLiveness-iOS";
+			sourceTree = "<group>";
+		};
+		5D0658AB1EC97AAA00FA6E8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D0658BC1EC97AAA00FA6E8E /* Info.plist */,
+				5D0658B91EC97AAA00FA6E8E /* LaunchScreen.storyboard */,
+				5D0658B41EC97AAA00FA6E8E /* Main.storyboard */,
+				14055D6F1ED5B04D004CA780 /* AppDelegate.h */,
+				14055D701ED5B04D004CA780 /* AppDelegate.m */,
+				14055D711ED5B04D004CA780 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D8C1FC21ED72E330036C63A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14699D431F8F907500195ED3 /* IDLFaceSDK.framework */,
+				5D8C1FCD1ED73B6B0036C63A /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D0658A71EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0658D51EC97AAA00FA6E8E /* Build configuration list for PBXNativeTarget "FaceSDK-Collect-WithLiveness-iOS" */;
+			buildPhases = (
+				5D0658A41EC97AAA00FA6E8E /* Sources */,
+				5D0658A51EC97AAA00FA6E8E /* Frameworks */,
+				5D0658A61EC97AAA00FA6E8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FaceSDK-Collect-WithLiveness-iOS";
+			productName = "FaceSDK-Collect-WithLiveness-iOS";
+			productReference = 5D0658A81EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D0658A01EC97AAA00FA6E8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Baidu;
+				TargetAttributes = {
+					5D0658A71EC97AAA00FA6E8E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6TZ958XNMU;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 5D0658A31EC97AAA00FA6E8E /* Build configuration list for PBXProject "FaceSDK-Collect-WithLiveness-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D06589F1EC97AAA00FA6E8E;
+			productRefGroup = 5D0658A91EC97AAA00FA6E8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D0658A71EC97AAA00FA6E8E /* FaceSDK-Collect-WithLiveness-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D0658A61EC97AAA00FA6E8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0658BB1EC97AAA00FA6E8E /* LaunchScreen.storyboard in Resources */,
+				5D0658B81EC97AAA00FA6E8E /* Assets.xcassets in Resources */,
+				DA728DDF21A6A5D100F4C565 /* idl-license.face-ios in Resources */,
+				5D0658B61EC97AAA00FA6E8E /* Main.storyboard in Resources */,
+				DA728DE121A6A5D100F4C565 /* com.baidu.idl.face.faceSDK.bundle in Resources */,
+				DA728DE021A6A5D100F4C565 /* com.baidu.idl.face.model.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D0658A41EC97AAA00FA6E8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14055D731ED5B04D004CA780 /* main.m in Sources */,
+				14055D681ED5B007004CA780 /* LivingConfigModel.m in Sources */,
+				14055D6C1ED5B007004CA780 /* LivenessViewController.m in Sources */,
+				14055D721ED5B04D004CA780 /* AppDelegate.m in Sources */,
+				04CCCD432271C31800E6C2F4 /* VCPreviewView.mm in Sources */,
+				5D2C32731F20B0C9000A5B71 /* ViewController.m in Sources */,
+				14055D691ED5B007004CA780 /* ImageUtils.m in Sources */,
+				5D2A16921F57F7B8000DCED7 /* CircleView.m in Sources */,
+				14055D6D1ED5B007004CA780 /* LivingConfigViewController.m in Sources */,
+				14055D6A1ED5B007004CA780 /* DetectionViewController.m in Sources */,
+				5D89945A1F5E7FE8006663BC /* RemindView.m in Sources */,
+				14055D671ED5B007004CA780 /* VideoCaptureDevice.m in Sources */,
+				14055D6B1ED5B007004CA780 /* FaceBaseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5D0658B41EC97AAA00FA6E8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D0658B51EC97AAA00FA6E8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D0658B91EC97AAA00FA6E8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D0658BA1EC97AAA00FA6E8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D0658D31EC97AAA00FA6E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D0658D41EC97AAA00FA6E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D0658D61EC97AAA00FA6E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TZ958XNMU;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceSDK",
+					"$(PROJECT_DIR)/FaceSDK-Collect-WithLiveness-iOS/Frameworks/FaceSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/FaceSDK",
+					"$(PROJECT_DIR)/glm/glm",
+					"$(PROJECT_DIR)/glm/",
+				);
+				INFOPLIST_FILE = "FaceSDK-Collect-WithLiveness-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.AnyChatAISecurityLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5D0658D71EC97AAA00FA6E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TZ958XNMU;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceSDK",
+					"$(PROJECT_DIR)/FaceSDK-Collect-WithLiveness-iOS/Frameworks/FaceSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/FaceSDK",
+					"$(PROJECT_DIR)/glm/glm",
+					"$(PROJECT_DIR)/glm/",
+				);
+				INFOPLIST_FILE = "FaceSDK-Collect-WithLiveness-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.AnyChatAISecurityLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D0658A31EC97AAA00FA6E8E /* Build configuration list for PBXProject "FaceSDK-Collect-WithLiveness-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0658D31EC97AAA00FA6E8E /* Debug */,
+				5D0658D41EC97AAA00FA6E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D0658D51EC97AAA00FA6E8E /* Build configuration list for PBXNativeTarget "FaceSDK-Collect-WithLiveness-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0658D61EC97AAA00FA6E8E /* Debug */,
+				5D0658D71EC97AAA00FA6E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D0658A01EC97AAA00FA6E8E /* Project object */;
+}
