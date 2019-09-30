@@ -34,11 +34,16 @@ class ScreenRecordCoordinator: NSObject
         self.recordCompleted = onCompletion
         self.viewOverlay?.show()
         
+        screenRecorder.startRecording(withFileName: fileName) { (error) in
+            
+        }
     }
     
     func stopRecording()
     {
-        self.viewOverlay?.hide()
-        self.recordCompleted?(nil)
+        screenRecorder.stopRecording { (error) in
+            self.viewOverlay?.hide()
+            self.recordCompleted?(error)
+        }
     }
 }

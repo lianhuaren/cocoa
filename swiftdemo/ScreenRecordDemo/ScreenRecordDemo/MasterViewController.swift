@@ -12,20 +12,20 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
-//    let screenRecord = ScreenRecordCoordinator()
+    let screenRecord = ScreenRecordCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = editButtonItem
 
-//        screenRecord.viewOverlay?.stopButtonColor = UIColor.red
-//        let randomNumber = arc4random_uniform(9999)
-//        screenRecord.startRecording(withFileName: "coolScreenRecording\(randomNumber)", recordingHandler: { (error) in
-//            print("Recording in progress")
-//        }) { (error) in
-//            print("Recording Complete")
-//        }
+        screenRecord.viewOverlay?.stopButtonColor = UIColor.red
+        let randomNumber = arc4random_uniform(9999)
+        screenRecord.startRecording(withFileName: "coolScreenRecording\(randomNumber)", recordingHandler: { (error) in
+            print("Recording in progress")
+        }) { (error) in
+            print("Recording Complete")
+        }
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton

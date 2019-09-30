@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-    let screenRecord = ScreenRecordCoordinator()
+//    let screenRecord = ScreenRecordCoordinator()
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -29,17 +29,17 @@ class DetailViewController: UIViewController {
         
         
         
-        screenRecord.viewOverlay?.stopButtonColor = UIColor.red
-        let randomNumber = arc4random_uniform(9999)
-        screenRecord.startRecording(withFileName: "coolScreenRecording\(randomNumber)", recordingHandler: { (error) in
-            print("Recording in progress")
-        }) { (error) in
-            print("Recording Complete")
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
-            self?.screenRecord.stopRecording()
-        }
+//        screenRecord.viewOverlay?.stopButtonColor = UIColor.red
+//        let randomNumber = arc4random_uniform(9999)
+//        screenRecord.startRecording(withFileName: "coolScreenRecording\(randomNumber)", recordingHandler: { (error) in
+//            print("Recording in progress")
+//        }) { (error) in
+//            print("Recording Complete")
+//        }
+//        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
+//            self?.screenRecord.stopRecording()
+//        }
     }
     
     deinit {
