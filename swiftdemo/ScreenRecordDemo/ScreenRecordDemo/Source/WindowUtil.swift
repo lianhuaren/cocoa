@@ -32,10 +32,12 @@ class WindowUtil: NSObject, Overlayable
     deinit {
         print(String.init(format: "\(#function):%s", object_getClassName(self)))
     }
-    
+
     func initViews()
     {
-        overlayWindow = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 30))
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height;
+        let height = statusBarHeight+10
+        overlayWindow = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height))
         stopButton = UIButton(type: UIButton.ButtonType.custom)
     }
     
