@@ -48,7 +48,7 @@ class AudioBoxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        test()
+//        test()
         buildUI()
         buildNavbar()
         performBinding()
@@ -128,6 +128,7 @@ extension AudioBoxViewController {
             .subscribeNext(weak: self, { (self) -> ([MusicSheetInfo]) -> Void in
                 return { (resps) in
                     print(resps)
+                    self.bannerView.configureWith(value: resps)
                 }
             })
 //        .subscribeNext(weak: self) { (self) in
@@ -136,6 +137,18 @@ extension AudioBoxViewController {
 //            }
 //        }
         .disposed(by: disposeBag)
+        
+        AudioProvider
+            .fetchAudioSheets()
+            .materialize()
+            .elements()
+            .subscribeNext(weak: self) { (self) -> ([MusicSheetInfo]) -> Void in
+                return { (resps) in
+                    self.dataSource.load(audioSheetList: resps)
+                    self.collectionView.reloadData()
+                }
+        }
+
 
         // 去音乐搜索
         viewModel.outputs.goAudioSearch
@@ -218,7 +231,10 @@ extension AudioBoxViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let value = dataSource[indexPath]
         if let sheet = value as? MusicSheetInfo {
-            viewModel.inputs.tappedAudioSheet(sheet)
+//            viewModel.inputs.tappedAudioSheet(sheet)
+            let vc = AudioSheetListViewController()
+            vc.audioSheet = sheet
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -272,7 +288,11 @@ extension AudioBoxViewController: UICollectionViewDelegateFlowLayout {
 
 extension AudioBoxViewController: GLarkBannerViewDelegate {
     func bannerViewDidTapped(at audioSheet: MusicSheetInfo) {
-        viewModel.inputs.tappedAudioSheet(audioSheet)
+//        viewModel.inputs.tappedAudioSheet(audioSheet)
+        let vc = AudioSheetListViewController()
+        vc.audioSheet = audioSheet
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 }
 

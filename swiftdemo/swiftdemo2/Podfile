@@ -1,0 +1,16 @@
+platform :ios, '9.0'
+
+target 'swiftdemo2' do
+  use_frameworks!
+
+
+
+pod 'MBProgressHUD'
+pod 'HandyJSON' 
+pod 'RxSwift'
+pod 'Moya/RxSwift'
+pod 'RxDataSources'
+pod 'RxSwiftExt', '~> 3.4.0'
+
+
+end
