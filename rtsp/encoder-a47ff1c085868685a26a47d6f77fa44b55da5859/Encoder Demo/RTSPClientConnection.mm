@@ -339,7 +339,7 @@ static void onRTCP(CFSocketRef s,
                     nalu = ppsData;
                 }
                 int cBytes = (int)[nalu length];
-                BOOL bLast = 1;//(i == nNALUs-1);
+                BOOL bLast = (i == nNALUs-1);
                 
                 const unsigned char* pSource = (unsigned char*)[nalu bytes];
                 

@@ -31,6 +31,7 @@
 		841255E516B14E45001749D9 /* RTSPClientConnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841255E416B14E45001749D9 /* RTSPClientConnection.mm */; };
 		841399FA16B1842B00FAD610 /* RTSPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 841399F916B1842B00FAD610 /* RTSPMessage.m */; };
 		846119C716D3BF8D00468D98 /* CameraServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 846119C616D3BF8D00468D98 /* CameraServer.m */; };
+		F381C2FA24454F1300B72E4E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F381C2F924454F1300B72E4E /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		841399F916B1842B00FAD610 /* RTSPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSPMessage.m; sourceTree = "<group>"; };
 		846119C516D3BF8D00468D98 /* CameraServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraServer.h; sourceTree = "<group>"; };
 		846119C616D3BF8D00468D98 /* CameraServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraServer.m; sourceTree = "<group>"; };
+		F381C2F924454F1300B72E4E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F381C2FA24454F1300B72E4E /* CoreImage.framework in Frameworks */,
 				04A9F7A822FADB6900B593DA /* OpenGLES.framework in Frameworks */,
 				841255CB16A09114001749D9 /* CoreVideo.framework in Frameworks */,
 				841255C916A035F9001749D9 /* CoreMedia.framework in Frameworks */,
@@ -114,6 +117,7 @@
 		8412559F16A035E3001749D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F381C2F924454F1300B72E4E /* CoreImage.framework */,
 				04A9F7A722FADB6900B593DA /* OpenGLES.framework */,
 				841255A016A035E3001749D9 /* UIKit.framework */,
 				841255A216A035E3001749D9 /* Foundation.framework */,
@@ -213,7 +217,7 @@
 				ORGANIZATIONNAME = "Geraint Davies";
 				TargetAttributes = {
 					8412559B16A035E3001749D9 = {
-						DevelopmentTeam = 6TZ958XNMU;
+						DevelopmentTeam = 7448PDV238;
 					};
 				};
 			};
@@ -222,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 8412559116A035E3001749D9;
@@ -354,11 +359,11 @@
 		841255C416A035E3001749D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 6TZ958XNMU;
+				DEVELOPMENT_TEAM = 7448PDV238;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Encoder Demo/Encoder Demo-Prefix.pch";
 				INFOPLIST_FILE = "Encoder Demo/Encoder Demo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bairuitech.test-rtsp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -367,11 +372,11 @@
 		841255C516A035E3001749D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 6TZ958XNMU;
+				DEVELOPMENT_TEAM = 7448PDV238;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Encoder Demo/Encoder Demo-Prefix.pch";
 				INFOPLIST_FILE = "Encoder Demo/Encoder Demo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bairuitech.test-rtsp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
