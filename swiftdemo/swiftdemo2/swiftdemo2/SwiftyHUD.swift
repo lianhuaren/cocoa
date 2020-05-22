@@ -2,7 +2,7 @@
 //  SwiftyHUD.swift
 //  swiftdemo2
 //
-//  Created by 佰锐 on 2019/10/28.
+//  Created by aaa on 2019/10/28.
 //  Copyright © 2019 admin. All rights reserved.
 //
 
