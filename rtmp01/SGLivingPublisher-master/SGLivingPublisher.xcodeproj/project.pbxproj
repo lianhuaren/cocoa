@@ -425,7 +425,7 @@
 				INFOPLIST_FILE = SGLivingPublisher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "db9e99f2-9ea8-438d-b662-159ee4d10d8c";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -442,7 +442,7 @@
 				INFOPLIST_FILE = SGLivingPublisher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "db9e99f2-9ea8-438d-b662-159ee4d10d8c";
 				PROVISIONING_PROFILE_SPECIFIER = "";

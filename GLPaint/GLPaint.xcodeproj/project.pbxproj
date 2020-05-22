@@ -639,7 +639,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GLPaint/PrefixHeader.pch";
 				INFOPLIST_FILE = GLPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/GLPaint/Classes/ColorPickerClasses\"/**";
@@ -662,7 +662,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GLPaint/PrefixHeader.pch";
 				INFOPLIST_FILE = GLPaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/GLPaint/Classes/ColorPickerClasses\"/**";

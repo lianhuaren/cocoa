@@ -3,7 +3,7 @@
 //  AnyChatXingYe
 //
 //  Created by Mac on 2019/4/17.
-//  Copyright © 2019 BaiRuiTechnology. All rights reserved.
+//  Copyright © 2019 Technology. All rights reserved.
 //
 
 #import "UIView+Test.h"

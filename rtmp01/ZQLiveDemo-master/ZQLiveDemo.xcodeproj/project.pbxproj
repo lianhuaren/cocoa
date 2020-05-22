@@ -2140,7 +2140,7 @@
 				DEVELOPMENT_TEAM = 6TZ958XNMU;
 				INFOPLIST_FILE = ZQLiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2152,7 +2152,7 @@
 				DEVELOPMENT_TEAM = 6TZ958XNMU;
 				INFOPLIST_FILE = ZQLiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

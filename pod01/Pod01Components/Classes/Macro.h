@@ -3,7 +3,7 @@
 //  LLTool
 //
 //  Created by Mac on 2019/3/6.
-//  Copyright © 2019 BaiRuiTechnology. All rights reserved.
+//  Copyright © 2019 aaaTechnology. All rights reserved.
 //
 
 #ifndef Macro_h

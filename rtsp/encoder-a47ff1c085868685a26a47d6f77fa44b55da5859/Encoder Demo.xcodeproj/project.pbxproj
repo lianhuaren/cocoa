@@ -363,7 +363,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Encoder Demo/Encoder Demo-Prefix.pch";
 				INFOPLIST_FILE = "Encoder Demo/Encoder Demo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bairuitech.test-rtsp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaatech.test-rtsp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -376,7 +376,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Encoder Demo/Encoder Demo-Prefix.pch";
 				INFOPLIST_FILE = "Encoder Demo/Encoder Demo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bairuitech.test-rtsp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaatech.test-rtsp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

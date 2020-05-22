@@ -3,7 +3,7 @@
 //  staticlib01
 //
 //  Created by Mac on 2019/4/26.
-//  Copyright © 2019 BaiRuiTechnology. All rights reserved.
+//  Copyright © 2019 aaaTechnology. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

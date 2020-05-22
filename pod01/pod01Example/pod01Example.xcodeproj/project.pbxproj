@@ -124,7 +124,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = BaiRuiTechnology;
+				ORGANIZATIONNAME = aaaTechnology;
 				TargetAttributes = {
 					04E0EA6F225C4B9B00951515 = {
 						CreatedOnToolsVersion = 10.1;
@@ -368,7 +368,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.pod01Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.pod01Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,7 +386,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.pod01Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.pod01Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

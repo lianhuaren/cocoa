@@ -3,7 +3,7 @@
 //  scoped01
 //
 //  Created by Mac on 2018/12/13.
-//  Copyright © 2018年 BaiRuiTechnology. All rights reserved.
+//  Copyright © 2018年 aaaTechnology. All rights reserved.
 //
 
 #include <iostream>

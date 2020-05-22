@@ -123,7 +123,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = BaiRuiTechnology;
+				ORGANIZATIONNAME = aaaTechnology;
 				TargetAttributes = {
 					04871B63221E33A1008964BB = {
 						CreatedOnToolsVersion = 10.1;
@@ -323,7 +323,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/curl01",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.curl01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.curl01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -345,7 +345,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/curl01",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bairuitech.curl01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaatech.curl01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

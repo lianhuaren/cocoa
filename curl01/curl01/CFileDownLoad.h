@@ -3,7 +3,7 @@
 //  curl01
 //
 //  Created by Mac on 2019/2/21.
-//  Copyright © 2019 BaiRuiTechnology. All rights reserved.
+//  Copyright © 2019 aaaTechnology. All rights reserved.
 //
 
 #ifndef CFileDownLoad_hpp
