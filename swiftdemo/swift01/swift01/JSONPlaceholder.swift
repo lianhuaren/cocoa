@@ -37,10 +37,18 @@ extension JSONPlaceholder : Decodable {
 }
 
 extension JSONPlaceholder {
-    static let all = Resource<[JSONPlaceholder]>(JSONPlaceholder.url!) {
-        (data) -> [JSONPlaceholder]? in
-        let posts = try? JSONDecoder().decode([JSONPlaceholder].self, from: data)
-        return posts
-        
-    }
+//    static let all = Resource<[JSONPlaceholder]>(JSONPlaceholder.url!) {
+//        (data) -> [JSONPlaceholder]? in
+//        let posts = try? JSONDecoder().decode([JSONPlaceholder].self, from: data)
+//        return posts
+//
+//    }
+    
+//    static let all = Resource<[JSONPlaceholder]>(url:JSONPlaceholder.url!) {
+//        (data) -> [JSONPlaceholder]? in
+//        return Resource.commonParse(data);
+//    }
+    
+    static let all = Resource<[JSONPlaceholder]>(url:JSONPlaceholder.url!,parse:Resource.commonParse)
+    
 }
