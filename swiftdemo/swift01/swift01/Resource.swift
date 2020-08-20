@@ -24,10 +24,13 @@ extension Resource where T: Decodable {
 ////            return object
 ////        }
 //        self.parse = parseJSON
-//        
+//
 //
 //    }
-    
+    init(_ url: URL) {
+        self.url = url
+        self.parse = Resource.commonParse
+    }
     static func commonParse(_ data:Data) -> T? {
         let decoder = JSONDecoder()
         let object = try? decoder.decode(T.self, from: data)

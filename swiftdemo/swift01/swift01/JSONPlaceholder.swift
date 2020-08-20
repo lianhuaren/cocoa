@@ -48,7 +48,6 @@ extension JSONPlaceholder {
 //        (data) -> [JSONPlaceholder]? in
 //        return Resource.commonParse(data);
 //    }
-    
-    static let all = Resource<[JSONPlaceholder]>(url:JSONPlaceholder.url!,parse:Resource.commonParse)
-    
+        
+    static let all = Resource<[JSONPlaceholder]>(JSONPlaceholder.url!)
 }
