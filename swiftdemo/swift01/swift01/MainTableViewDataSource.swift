@@ -11,6 +11,8 @@ import UIKit
 
 class MainTableViewDataSource: NSObject {
     let webService = WebService()
+    let sqlService = SqlService()
+    
     var dateMachines = [DateFmt]()
     
     fileprivate func setupDates() {
@@ -34,6 +36,13 @@ class MainTableViewDataSource: NSObject {
 
 extension MainTableViewDataSource {
     func getData() {
+       
+        
+        sqlService.load(resource: JSONPlaceholder.sqlSelect) { ( posts) in
+                        guard let placeholder = posts else {return}
+                        print(placeholder)
+        }
+        return;
         webService.load(resource: JSONPlaceholder.all) { [weak self] (posts) in
             guard let placeholder = posts else {return}
 //            print(placeholder)

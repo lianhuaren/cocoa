@@ -50,4 +50,9 @@ extension JSONPlaceholder {
 //    }
         
     static let all = Resource<[JSONPlaceholder]>(JSONPlaceholder.url!)
+    
+    static let tablename = "jsonplaceholder"
+    static let sqlSelect = SqlResource<JSONPlaceholder>(tablename: tablename) {
+        return sqlSelectPrefix+JSONPlaceholder.tablename
+    }
 }

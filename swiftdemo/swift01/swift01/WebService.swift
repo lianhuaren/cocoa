@@ -20,8 +20,19 @@ final class WebService {
             completion(resource.parse(data))
         }.resume()
     }
+    
+
 }
 
+final class SqlService {
+    func load<T>(resource: SqlResource<T>, completion:(([T]?)->Void)) {
+        let sql = resource.sqlSelect()
+        print(sql!)
+        
+        let object = [T]()
+        completion(object)
+    }
+}
 
 
 

@@ -18,6 +18,15 @@
 typedef int (^encoder_handler_t)(NSArray* data, double pts);
 typedef int (^param_handler_t)(NSData* params);
 
+@interface EncodedFrame : NSObject
+
+- (EncodedFrame*) initWithData:(NSArray*) nalus andPOC:(int) poc;
+
+@property int poc;
+@property NSArray* frame;
+
+@end
+
 @interface AVEncoder : NSObject
 
 + (AVEncoder*) encoderForHeight:(int) height andWidth:(int) width;

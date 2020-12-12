@@ -9,7 +9,7 @@
 #import "AVEncoder.h"
 #import "NALUnit.h"
 
-static unsigned int to_host(unsigned char* p)
+unsigned int to_host(unsigned char* p)
 {
     return (p[0] << 24) + (p[1] << 16) + (p[2] << 8) + p[3];
 }
@@ -19,14 +19,6 @@ static unsigned int to_host(unsigned char* p)
 
 // store the calculated POC with a frame ready for timestamp assessment
 // (recalculating POC out of order will get an incorrect result)
-@interface EncodedFrame : NSObject
-
-- (EncodedFrame*) initWithData:(NSArray*) nalus andPOC:(int) poc;
-
-@property int poc;
-@property NSArray* frame;
-
-@end
 
 @implementation EncodedFrame
 

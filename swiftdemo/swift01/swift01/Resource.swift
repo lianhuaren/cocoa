@@ -12,7 +12,7 @@ struct Resource<T> {
     let url: URL
     let parse: (Data) -> T?
     
-
+    
 }
 
 extension Resource where T: Decodable {
@@ -39,3 +39,26 @@ extension Resource where T: Decodable {
 
 }
 
+let sqlSelectPrefix = "select * from "
+
+struct SqlResource<T> {
+    let tablename: String
+    let sqlSelect: () -> String?
+}
+
+extension SqlResource {
+//    init(_ tablename: String, sqlSelect: @escaping () -> String?) {
+//        self.tablename = tablename
+//        self.sqlSelect = sqlSelect//SqlResource.commonSqlSelect;
+////        self.retrieve = {
+////            let sql = "select * from" + tablename
+////            print("===sql:",sql)
+////            let object = [T]()
+////            return object
+////        }
+//    }
+    func commonSqlSelect() -> String {
+        return sqlSelectPrefix + self.tablename
+    }
+    
+}

@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[CameraServer server] startup];
+//    [[CameraServer server] startup];
     
     return YES;
 }

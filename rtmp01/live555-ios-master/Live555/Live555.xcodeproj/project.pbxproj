@@ -882,8 +882,7 @@
 				7540AC6E1AB771BF0071A5FB /* NetAddress.cpp */,
 				7540AC6F1AB771BF0071A5FB /* NetInterface.cpp */,
 			);
-			name = groupsock;
-			path = ../../src/live555/groupsock;
+			path = groupsock;
 			sourceTree = "<group>";
 		};
 		7540AC5F1AB771BF0071A5FB /* include */ = {
@@ -907,6 +906,7 @@
 			children = (
 				7540AC711AB771BF0071A5FB /* AC3AudioFileServerMediaSubsession.cpp */,
 				7540AC721AB771BF0071A5FB /* AC3AudioRTPSink.cpp */,
+				7540AC5A1AB771BF0071A5FB /* groupsock */,
 				7540AC731AB771BF0071A5FB /* AC3AudioRTPSource.cpp */,
 				7540AC741AB771BF0071A5FB /* AC3AudioStreamFramer.cpp */,
 				7540AC751AB771BF0071A5FB /* ADTSAudioFileServerMediaSubsession.cpp */,
@@ -1340,7 +1340,6 @@
 		DBE19F2014ABB5CC000A8D99 /* Live555 */ = {
 			isa = PBXGroup;
 			children = (
-				7540AC5A1AB771BF0071A5FB /* groupsock */,
 				7540AC701AB771BF0071A5FB /* liveMedia */,
 				7540ADC11AB771C00071A5FB /* mediaServer */,
 				7540ADCA1AB771C00071A5FB /* proxyServer */,
@@ -1613,6 +1612,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = DBE19F1014ABB5CB000A8D99;

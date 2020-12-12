@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
     // A H.264 video elementary stream:
     {
         char const* streamName = "H264unicast";//流名字，媒体名
-        char const* inputFileName = "test.264";//文件名，当客户端输入的流名字为h264ESVideoTest时，实际上打开的是test.264文件
+        char const* inputFileName = "test.h264";//文件名，当客户端输入的流名字为h264ESVideoTest时，实际上打开的是test.264文件
         // 4.创建媒体会话
         //当客户点播时，要输入流名字streamName，告诉RTSP服务器点播的是哪个流。
         //流名字和文件名的对应关系是通过增加子会话建立起来的(流名字streamName不是文件名inputFileName)。媒体会话对会话描述、会话持续时间、流名字等与会话有关的信息进行管理

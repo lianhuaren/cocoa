@@ -19,7 +19,7 @@
 		841255B716A035E3001749D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 841255B616A035E3001749D9 /* Default-568h@2x.png */; };
 		841255BA16A035E3001749D9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841255B816A035E3001749D9 /* MainStoryboard_iPhone.storyboard */; };
 		841255BD16A035E3001749D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841255BB16A035E3001749D9 /* MainStoryboard_iPad.storyboard */; };
-		841255C016A035E3001749D9 /* EncoderDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841255BF16A035E3001749D9 /* EncoderDemoViewController.m */; };
+		841255C016A035E3001749D9 /* EncoderDemoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841255BF16A035E3001749D9 /* EncoderDemoViewController.mm */; };
 		841255C716A035F1001749D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841255C616A035F1001749D9 /* AVFoundation.framework */; };
 		841255C916A035F9001749D9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841255C816A035F9001749D9 /* CoreMedia.framework */; };
 		841255CB16A09114001749D9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841255CA16A09114001749D9 /* CoreVideo.framework */; };
@@ -31,6 +31,8 @@
 		841255E516B14E45001749D9 /* RTSPClientConnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841255E416B14E45001749D9 /* RTSPClientConnection.mm */; };
 		841399FA16B1842B00FAD610 /* RTSPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 841399F916B1842B00FAD610 /* RTSPMessage.m */; };
 		846119C716D3BF8D00468D98 /* CameraServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 846119C616D3BF8D00468D98 /* CameraServer.m */; };
+		F377E6A22508E34600A6E8EF /* capture.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F377E6A02508E34500A6E8EF /* capture.mp4 */; };
+		F377E6A32508E34600A6E8EF /* params.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F377E6A12508E34600A6E8EF /* params.mp4 */; };
 		F381C2FA24454F1300B72E4E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F381C2F924454F1300B72E4E /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +54,7 @@
 		841255B916A035E3001749D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		841255BC16A035E3001749D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		841255BE16A035E3001749D9 /* EncoderDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncoderDemoViewController.h; sourceTree = "<group>"; };
-		841255BF16A035E3001749D9 /* EncoderDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncoderDemoViewController.m; sourceTree = "<group>"; };
+		841255BF16A035E3001749D9 /* EncoderDemoViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EncoderDemoViewController.mm; sourceTree = "<group>"; };
 		841255C616A035F1001749D9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		841255C816A035F9001749D9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		841255CA16A09114001749D9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -72,6 +74,8 @@
 		841399F916B1842B00FAD610 /* RTSPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSPMessage.m; sourceTree = "<group>"; };
 		846119C516D3BF8D00468D98 /* CameraServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraServer.h; sourceTree = "<group>"; };
 		846119C616D3BF8D00468D98 /* CameraServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraServer.m; sourceTree = "<group>"; };
+		F377E6A02508E34500A6E8EF /* capture.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = capture.mp4; sourceTree = "<group>"; };
+		F377E6A12508E34600A6E8EF /* params.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = params.mp4; sourceTree = "<group>"; };
 		F381C2F924454F1300B72E4E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -129,12 +133,14 @@
 		841255A616A035E3001749D9 /* Encoder Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F377E6A02508E34500A6E8EF /* capture.mp4 */,
+				F377E6A12508E34600A6E8EF /* params.mp4 */,
 				841255AF16A035E3001749D9 /* EncoderDemoAppDelegate.h */,
 				841255B016A035E3001749D9 /* EncoderDemoAppDelegate.m */,
 				841255B816A035E3001749D9 /* MainStoryboard_iPhone.storyboard */,
 				841255BB16A035E3001749D9 /* MainStoryboard_iPad.storyboard */,
 				841255BE16A035E3001749D9 /* EncoderDemoViewController.h */,
-				841255BF16A035E3001749D9 /* EncoderDemoViewController.m */,
+				841255BF16A035E3001749D9 /* EncoderDemoViewController.mm */,
 				846119C516D3BF8D00468D98 /* CameraServer.h */,
 				846119C616D3BF8D00468D98 /* CameraServer.m */,
 				841255DD16A85477001749D9 /* RTSP */,
@@ -245,9 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				841255AB16A035E3001749D9 /* InfoPlist.strings in Resources */,
+				F377E6A22508E34600A6E8EF /* capture.mp4 in Resources */,
 				841255B316A035E3001749D9 /* Default.png in Resources */,
 				841255B516A035E3001749D9 /* Default@2x.png in Resources */,
 				841255B716A035E3001749D9 /* Default-568h@2x.png in Resources */,
+				F377E6A32508E34600A6E8EF /* params.mp4 in Resources */,
 				841255BA16A035E3001749D9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				841255BD16A035E3001749D9 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
@@ -262,7 +270,7 @@
 			files = (
 				841255AD16A035E3001749D9 /* main.m in Sources */,
 				841255B116A035E3001749D9 /* EncoderDemoAppDelegate.m in Sources */,
-				841255C016A035E3001749D9 /* EncoderDemoViewController.m in Sources */,
+				841255C016A035E3001749D9 /* EncoderDemoViewController.mm in Sources */,
 				841255CE16A47A7D001749D9 /* AVEncoder.mm in Sources */,
 				841255D116A4848E001749D9 /* VideoEncoder.m in Sources */,
 				841255D616A5AB8B001749D9 /* MP4Atom.m in Sources */,
