@@ -27,7 +27,11 @@
 #include <string.h>
 #include <stdarg.h>
 //#include <pthread.h>
+#ifdef _WIN32
 #include "unistd.h"
+#else
+#include <unistd.h>
+#endif
 #include <inttypes.h>
 #include <ctype.h>
 #include <errno.h>
@@ -41,6 +45,7 @@ typedef int Socklen;
 #include <sys/socket.h>
 #include <netinet/in.h>
 typedef socklen_t Socklen;
+typedef int SOCKET;
 #endif
 
 #include "webrtc/system_wrappers/interface/atomic32.h"
@@ -71,8 +76,19 @@ static int swrite(SOCKET s, void* buf, int len)
 
 static int sclose(SOCKET s)
 {
+#ifdef _WIN32
     return closesocket(s);
+#else
+    return close(s);
+#endif
+    
 }
+
+#ifdef _WIN32
+
+#else
+#define strtok_s strtok_r
+#endif
 
 static void trace(char* fmt, ...)
 {

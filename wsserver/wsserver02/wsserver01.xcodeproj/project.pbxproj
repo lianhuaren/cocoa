@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F34EC8352584A6BF00E30D9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC8342584A6BF00E30D9A /* main.cpp */; };
-		F34EC85D2584A71B00E30D9A /* wsserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC83F2584A71B00E30D9A /* wsserver.cpp */; };
 		F34EC8D02584B6DF00E30D9A /* libsystem_wrappers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F34EC8CA2584B6CB00E30D9A /* libsystem_wrappers.a */; };
+		F34EC8F92585142600E30D9A /* wsserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC8F52585142600E30D9A /* wsserver.cpp */; };
+		F34EC8FA2585142600E30D9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC8F82585142600E30D9A /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +43,10 @@
 
 /* Begin PBXFileReference section */
 		F34EC8312584A6BF00E30D9A /* wsserver01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wsserver01; sourceTree = BUILT_PRODUCTS_DIR; };
-		F34EC8342584A6BF00E30D9A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		F34EC83F2584A71B00E30D9A /* wsserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wsserver.cpp; sourceTree = "<group>"; };
-		F34EC84F2584A71B00E30D9A /* wsserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wsserver.h; sourceTree = "<group>"; };
 		F34EC8C52584B6CB00E30D9A /* system_wrappers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = system_wrappers.xcodeproj; path = ../webrtc/system_wrappers/source/system_wrappers.xcodeproj; sourceTree = "<group>"; };
+		F34EC8F52585142600E30D9A /* wsserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wsserver.cpp; sourceTree = "<group>"; };
+		F34EC8F72585142600E30D9A /* wsserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wsserver.h; sourceTree = "<group>"; };
+		F34EC8F82585142600E30D9A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,7 @@
 		F34EC8282584A6BF00E30D9A = {
 			isa = PBXGroup;
 			children = (
+				F34EC8F42585142600E30D9A /* src */,
 				F34EC8C52584B6CB00E30D9A /* system_wrappers.xcodeproj */,
 				F34EC8332584A6BF00E30D9A /* wsserver01 */,
 				F34EC8322584A6BF00E30D9A /* Products */,
@@ -82,19 +83,8 @@
 		F34EC8332584A6BF00E30D9A /* wsserver01 */ = {
 			isa = PBXGroup;
 			children = (
-				F34EC83C2584A71B00E30D9A /* src */,
-				F34EC8342584A6BF00E30D9A /* main.cpp */,
 			);
 			path = wsserver01;
-			sourceTree = "<group>";
-		};
-		F34EC83C2584A71B00E30D9A /* src */ = {
-			isa = PBXGroup;
-			children = (
-				F34EC83F2584A71B00E30D9A /* wsserver.cpp */,
-				F34EC84F2584A71B00E30D9A /* wsserver.h */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		F34EC8C62584B6CB00E30D9A /* Products */ = {
@@ -110,6 +100,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F34EC8F42585142600E30D9A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F34EC8F52585142600E30D9A /* wsserver.cpp */,
+				F34EC8F72585142600E30D9A /* wsserver.h */,
+				F34EC8F82585142600E30D9A /* main.cpp */,
+			);
+			name = src;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34EC8352584A6BF00E30D9A /* main.cpp in Sources */,
-				F34EC85D2584A71B00E30D9A /* wsserver.cpp in Sources */,
+				F34EC8FA2585142600E30D9A /* main.cpp in Sources */,
+				F34EC8F92585142600E30D9A /* wsserver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -209,9 +209,9 @@
 				9DD25F93C21ED93822AAB172 /* cpu_features_wrapper.h */,
 				E8B72C7F2CBC28F64BED16C3 /* cpu_info.h */,
 				6BB2A4B182EF6AF3E144ED00 /* critical_section_wrapper.h */,
-				F563BC755FECE3B0F9F8C36B /* data_log.h */,
 				49FB0B7372D5361C260BAAC1 /* data_log_c.h */,
 				ED3353821D042B1D583893CD /* data_log_impl.h */,
+				F563BC755FECE3B0F9F8C36B /* data_log.h */,
 				1554DC7068BACBE7DA0A80C1 /* event_tracer.h */,
 				A2478C65618588B1178F8967 /* event_wrapper.h */,
 				63DA9AC8B7EF54E9789E990D /* file_wrapper.h */,
@@ -229,8 +229,8 @@
 				F1C0A77268E6FBD28FB7D297 /* stringize_macros.h */,
 				FCD6106968F52ACC82D0EA7B /* thread_wrapper.h */,
 				5F1F4C11EACDC59D2F8EB60A /* tick_util.h */,
-				731F117FA3078BC7D9388D57 /* trace.h */,
 				24BE3E32DB35D4CBD087FEDF /* trace_event.h */,
+				731F117FA3078BC7D9388D57 /* trace.h */,
 			);
 			path = ../interface;
 			sourceTree = "<group>";
@@ -260,11 +260,15 @@
 		BFBD6FD89B8BC7A95ABD1631 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 			};
 			buildConfigurationList = 503696E76B5331DD4A9BB03E /* Build configuration list for PBXProject "system_wrappers" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 53B1CC7086F097B3DD66AD95;
 			projectDirPath = "";
 			projectRoot = "";
