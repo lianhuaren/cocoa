@@ -15,18 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="..\..\src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="wsserver.cpp">
+    <ClCompile Include="..\..\src\wsserver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="wsserver.h">
+    <ClInclude Include="..\..\src\unistd.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="unistd.h">
+    <ClInclude Include="..\..\src\wsserver.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

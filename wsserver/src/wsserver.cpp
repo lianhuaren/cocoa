@@ -1055,11 +1055,13 @@ WsServer* wsCreate(
     void* context, char* dir, int port
 )
 {
+#ifdef _WIN32
     WSADATA wsaData;
     //第一个参数为WinSock版本号，低字节为主版本号，高字节为修正版本号，第二个参数为WSADATA类型的指针 初始化成功返回0
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         printf("socket  error");
     }
+#endif
 
     WsServer* obj = (WsServer*)malloc(sizeof(WsServer));
     if (!obj)
