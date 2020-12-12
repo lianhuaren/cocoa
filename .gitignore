@@ -22,3 +22,7 @@ profile
 .git-credentials
 Pods
 xcuserstate
+xcodebuild
+
+*.a
+*.framework
