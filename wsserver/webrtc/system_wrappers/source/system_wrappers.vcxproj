@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Default|Win32">
+      <Configuration>Default</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6B936077-4040-F8E1-D325-51CF0A1D719C}</ProjectGuid>
+    <RootNamespace>system_wrappers</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Default|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Default|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30623.7</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;..\..\..;.;spreadsortlib;..\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4373;4389;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WEBRTC_SVNREVISION="Unavailable(issue687)";WEBRTC_CHROMIUM_BUILD;WEBRTC_WIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)\vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;..\..\..;.;spreadsortlib;..\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WEBRTC_SVNREVISION="Unavailable(issue687)";WEBRTC_CHROMIUM_BUILD;WEBRTC_WIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)lib\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aligned_malloc.cc" />
+    <ClCompile Include="atomic32_win.cc" />
+    <ClCompile Include="clock.cc" />
+    <ClCompile Include="condition_variable.cc" />
+    <ClCompile Include="condition_variable_event_win.cc" />
+    <ClCompile Include="condition_variable_native_win.cc" />
+    <ClCompile Include="cpu_features.cc" />
+    <ClCompile Include="cpu_info.cc" />
+    <ClCompile Include="critical_section.cc" />
+    <ClCompile Include="critical_section_win.cc" />
+    <ClCompile Include="data_log.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="data_log_c.cc" />
+    <ClCompile Include="data_log_no_op.cc" />
+    <ClCompile Include="event.cc" />
+    <ClCompile Include="event_tracer.cc" />
+    <ClCompile Include="event_win.cc" />
+    <ClCompile Include="file_impl.cc" />
+    <ClCompile Include="list_no_stl.cc" />
+    <ClCompile Include="logcat_trace_context.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="logging.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="logging_no_op.cc" />
+    <ClCompile Include="rw_lock.cc" />
+    <ClCompile Include="rw_lock_generic.cc" />
+    <ClCompile Include="rw_lock_win.cc" />
+    <ClCompile Include="sleep.cc" />
+    <ClCompile Include="sort.cc" />
+    <ClCompile Include="thread.cc" />
+    <ClCompile Include="thread_win.cc" />
+    <ClCompile Include="tick_util.cc" />
+    <ClCompile Include="trace_impl.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="trace_impl_no_op.cc" />
+    <ClCompile Include="trace_posix.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="trace_win.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\interface\aligned_malloc.h" />
+    <ClInclude Include="..\interface\atomic32.h" />
+    <ClInclude Include="..\interface\clock.h" />
+    <ClInclude Include="..\interface\compile_assert.h" />
+    <ClInclude Include="..\interface\condition_variable_wrapper.h" />
+    <ClInclude Include="..\interface\cpu_features_wrapper.h" />
+    <ClInclude Include="..\interface\cpu_info.h" />
+    <ClInclude Include="..\interface\critical_section_wrapper.h" />
+    <ClInclude Include="..\interface\data_log.h" />
+    <ClInclude Include="..\interface\data_log_c.h" />
+    <ClInclude Include="..\interface\data_log_impl.h" />
+    <ClInclude Include="..\interface\event_tracer.h" />
+    <ClInclude Include="..\interface\event_wrapper.h" />
+    <ClInclude Include="..\interface\file_wrapper.h" />
+    <ClInclude Include="..\interface\fix_interlocked_exchange_pointer_win.h" />
+    <ClInclude Include="..\interface\list_wrapper.h" />
+    <ClInclude Include="..\interface\logcat_trace_context.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\interface\logging.h" />
+    <ClInclude Include="..\interface\ref_count.h" />
+    <ClInclude Include="..\interface\rw_lock_wrapper.h" />
+    <ClInclude Include="..\interface\scoped_ptr.h" />
+    <ClInclude Include="..\interface\scoped_refptr.h" />
+    <ClInclude Include="..\interface\sleep.h" />
+    <ClInclude Include="..\interface\sort.h" />
+    <ClInclude Include="..\interface\static_instance.h" />
+    <ClInclude Include="..\interface\stringize_macros.h" />
+    <ClInclude Include="..\interface\thread_wrapper.h" />
+    <ClInclude Include="..\interface\tick_util.h" />
+    <ClInclude Include="..\interface\trace.h" />
+    <ClInclude Include="..\interface\trace_event.h" />
+    <ClInclude Include="condition_variable_event_win.h" />
+    <ClInclude Include="condition_variable_native_win.h" />
+    <ClInclude Include="critical_section_win.h" />
+    <ClInclude Include="event_win.h" />
+    <ClInclude Include="file_impl.h" />
+    <ClInclude Include="rw_lock_generic.h" />
+    <ClInclude Include="rw_lock_win.h" />
+    <ClInclude Include="thread_win.h" />
+    <ClInclude Include="trace_impl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="trace_posix.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="trace_win.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="system_wrappers.gyp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
