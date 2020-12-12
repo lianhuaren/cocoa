@@ -28,7 +28,8 @@
 #include <stdarg.h>
 //#include <pthread.h>
 #ifdef _WIN32
-#include "unistd.h"
+#include <io.h>
+#include <process.h>
 #else
 #include <unistd.h>
 #endif

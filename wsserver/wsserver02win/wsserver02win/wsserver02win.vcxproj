@@ -23,7 +23,6 @@
     <ClCompile Include="..\..\src\wsserver.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\unistd.h" />
     <ClInclude Include="..\..\src\wsserver.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
