@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Calaos.cpp" />
+    <ClCompile Include="HttpClient.cpp" />
+    <ClCompile Include="HttpServer.cpp" />
+    <ClCompile Include="Params.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="uvw01.cpp" />
+    <ClCompile Include="WebSocket.cpp" />
+    <ClCompile Include="WebSocketFrame.cpp" />
+    <ClCompile Include="..\..\calaos_base-c0c020ccfb68abb505601e9072977140774c2308\src\lib\http-parser\http_parser.c" />
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="SHA1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calaos.h" />
+    <ClInclude Include="HttpClient.h" />
+    <ClInclude Include="HttpServer.h" />
+    <ClInclude Include="libuvw.h" />
+    <ClInclude Include="Params.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="WebSocket.h" />
+    <ClInclude Include="WebSocketFrame.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="SHA1.h" />
+    <ClInclude Include="HttpCodes.h" />
+  </ItemGroup>
+</Project>
