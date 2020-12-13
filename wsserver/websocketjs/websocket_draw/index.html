@@ -1,0 +1,218 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+
+  <video id="localVideo" autoplay playsinline></video>
+<video id="remoteVideo" autoplay playsinline></video>
+
+
+<div>
+  <button id="startButton">Start</button>
+  <button id="callButton">Call</button>
+  <button id="hangupButton">Hang Up</button>
+</div>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="main-v2.js"></script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+
+  <textarea id="dataChannelSend" disabled
+    placeholder="Press Start, enter some text, then press Send."></textarea>
+  <textarea id="dataChannelReceive" disabled></textarea>
+
+  <div id="buttons">
+    <button id="startButton">Start</button>
+    <button id="sendButton">Send</button>
+    <button id="closeButton">Stop</button>
+  </div>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="main-v2.js"></script>
+
+</body>
+
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="main-v4.js"></script>
+  
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Realtime communication with WebRTC</title>
+
+  <!--link rel="stylesheet" href="/main.css" /-->
+    <style type="text/css">
+        body{height:100%;}
+        a:link, a:visited{color:#333;text-decoration:none;}
+        .con1,.con2{position:relative;border:#ccc solid 1px;width:400px;height:400px;float:left;margin-right:5px;}
+        .con1{width:990px;height:500px;}
+        .handler1, .handler2{width:40px;height:400px;border:#ccc solid 1px;float:left;margin-right:25px;}
+        .handler1 a, .handler2 a{border-bottom:#ccc solid 1px;height:30px;line-height:30px;font-size:12px;display: block;text-align:center;}
+        .handler1 a.active, .handler2 a.active{background:#ddd;}
+        input{width:30px;}
+        .handler1 span, .handler2 span{width:10px;height:10px;margin:1px;display:block;border:#fff solid 1px;}
+        .handler1 span.active, .handler2 span.active{width:10px;height:10px;margin:1px;display:block;border-color:red;}
+    </style>
+</head>
+
+<body>
+
+  <h1>Realtime communication with WebRTC</h1>
+
+  <div id="videos">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+  </div>
+
+<div class="con1">
+
+</div>
+<div class="handler1">
+    <a class="rect" href="javascript:;">矩形</a>
+    <a class="round" href="javascript:;">圆形</a>
+    <a class="line" href="javascript:;">直线</a>
+    <a class="curve" href="javascript:;">曲线</a>
+    <a class="arrow" href="javascript:;">箭头</a>
+    <a class="ease" href="javascript:;">橡皮</a>
+    <a class="back" href="javascript:;">后退</a>
+    <a class="forward" href="javascript:;">前进</a>
+    <a class="clear" href="javascript:;">清除</a>
+    <a class="save" href="javascript:;">保存</a>
+    <input class="lineWidth" value="1" autocomplete="off" />
+    <span style="background: red;"></span>
+    <span style="background: green;"></span>
+    <span style="background: blue;"></span>
+    <span style="background: #000;"></span>
+</div>
+<!-- <div class="con2">
+
+</div>
+<div class="handler2">
+    <a class="rect" href="javascript:;">矩形</a>
+    <a class="round" href="javascript:;">圆形</a>
+    <a class="line" href="javascript:;">直线</a>
+    <a class="curve" href="javascript:;">曲线</a>
+    <a class="ease" href="javascript:;">橡皮</a>
+</div> -->
+<script src="./js/jquery.js"></script>
+<script src="./js/excanvas.js"></script>
+<script src="./js/html2canvas.js"></script>
+<script src="./js/draw-board.js"></script>
+<!--<script src="/socket.io/socket.io.js"></script>-->
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="./js/main-v5.js"></script>
+  
+<script>
+    var panel = new DrawBoard({
+        width: $('.con1').width(),
+        height: $('.con1').height(),
+        parent: '.con1',
+        type: 'arrow',
+        lineWidth: $('.handler1 .lineWidth').val(),
+        color: 'red'
+    });
+    // var panel2 = new DrawBoard({
+    //     width: $('.con2').width(),
+    //     height: $('.con2').height(),
+    //     parent: '.con2',
+    //     type: 'rect',
+    //     color: 'red'
+    // });
+    $('.handler1 a:not(.back,.forward), .handler2 a').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('.handler1 a.rect').click(function () { panel.type = 'rect'; });
+    $('.handler1 a.round').click(function () { panel.type = 'round'; });
+    $('.handler1 a.line').click(function () { panel.type = 'line'; });
+    $('.handler1 a.curve').click(function () { panel.type = 'curve'; });
+    $('.handler1 a.arrow').click(function () { panel.type = 'arrow'; });
+    $('.handler1 a.ease').click(function () { panel.type = 'ease'; });
+    $('.handler1 a.back').click(function () { panel.back(); });
+    $('.handler1 a.forward').click(function () { panel.forward(); });
+    $('.handler1 .lineWidth').change(function () { panel.setLineWidth($(this).val()); });
+    $('.handler1 span').click(function () {
+        panel.setColor($(this).css('background-color'));
+        $(this).addClass('active').siblings('span').removeClass('active');
+    });
+    $('.handler1 .clear').click(function() {
+        panel.clear();
+    });
+    $('.handler1 .save').click(function() {
+        panel.save();
+    });
+
+    // $('.handler2 a.rect').click(function () { panel2.type = 'rect'; });
+    // $('.handler2 a.round').click(function () { panel2.type = 'round'; });
+    // $('.handler2 a.line').click(function () { panel2.type = 'line'; });
+    // $('.handler2 a.curve').click(function () { panel2.type = 'curve'; });
+    // $('.handler2 a.ease').click(function () { panel2.type = 'ease'; });
+</script>
+
+  
+</body>
+
+</html>

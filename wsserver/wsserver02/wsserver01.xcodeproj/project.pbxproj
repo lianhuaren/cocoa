@@ -10,6 +10,7 @@
 		F34EC8D02584B6DF00E30D9A /* libsystem_wrappers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F34EC8CA2584B6CB00E30D9A /* libsystem_wrappers.a */; };
 		F34EC8F92585142600E30D9A /* wsserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC8F52585142600E30D9A /* wsserver.cpp */; };
 		F34EC8FA2585142600E30D9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC8F82585142600E30D9A /* main.cpp */; };
+		F34EC9032586444100E30D9A /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34EC9012586444100E30D9A /* WebSocket.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		F34EC8F52585142600E30D9A /* wsserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wsserver.cpp; sourceTree = "<group>"; };
 		F34EC8F72585142600E30D9A /* wsserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wsserver.h; sourceTree = "<group>"; };
 		F34EC8F82585142600E30D9A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F34EC9012586444100E30D9A /* WebSocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WebSocket.cpp; sourceTree = "<group>"; };
+		F34EC9022586444100E30D9A /* WebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
+		F34EC906258645D600E30D9A /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,10 @@
 			children = (
 				F34EC8F52585142600E30D9A /* wsserver.cpp */,
 				F34EC8F72585142600E30D9A /* wsserver.h */,
+				F34EC9012586444100E30D9A /* WebSocket.cpp */,
+				F34EC9022586444100E30D9A /* WebSocket.h */,
 				F34EC8F82585142600E30D9A /* main.cpp */,
+				F34EC906258645D600E30D9A /* Utils.h */,
 			);
 			name = src;
 			path = ../src;
@@ -188,6 +195,7 @@
 			files = (
 				F34EC8FA2585142600E30D9A /* main.cpp in Sources */,
 				F34EC8F92585142600E30D9A /* wsserver.cpp in Sources */,
+				F34EC9032586444100E30D9A /* WebSocket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

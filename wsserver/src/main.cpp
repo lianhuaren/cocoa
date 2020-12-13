@@ -15,6 +15,7 @@
 
 #include "wsserver.h"
 //#include <sdrlib.h>
+#include "WebSocket.h"
 
 
 #ifndef TRUE
@@ -257,30 +258,47 @@ static int getFloat(char *str, float *f)
 
 
 
-
+std::list<WebSocket *> connections;
 
 
 
 
 static void onOpen(WsHandler *ws, char *msg)
 {
-    SdrServer *svr = (SdrServer *) ws->context;
+//    SdrServer *svr = (SdrServer *) ws->context;
 //    SdrLib *sdr = svr->sdr;
+    WebSocket *conn = new WebSocket();
+    conn->ws = ws;
+    
+    ws->context = conn;
+    
+    connections.push_back(conn);
+    
 }
 
 static void onClose(WsHandler *ws, char *msg)
 {
-    SdrServer *svr = (SdrServer *) ws->context;
+//    SdrServer *svr = (SdrServer *) ws->context;
 //    SdrLib *sdr = svr->sdr;
+    
+    WebSocket *conn = (WebSocket *) ws->context;
+    connections.remove(conn);
+    delete conn;
+    
+    ws->context = NULL;
 }
 
 static void onMessage(WsHandler *ws, unsigned char *data, int len)
 {
-    SdrServer *svr = (SdrServer *) ws->context;
+//    SdrServer *svr = (SdrServer *) ws->context;
 //    SdrLib *sdr = svr->sdr;
 //
 //    int ret = parseAndExecute(sdr, (char *)data);
     printf("%s\n",(char *)data);
+    
+    WebSocket *conn = (WebSocket *) ws->context;
+    string str((char *)data);
+    conn->ProcessData(str);
 }
 
 static void onError(WsHandler *ws, char *msg)
@@ -333,7 +351,7 @@ static void usage(char *progname)
 int main(int argc, char **argv)
 {
     char *dir = ".";
-    int port = 8800;
+    int port = 8080;//8800;
     int c;
     /*while ((c = getopt (argc, argv, "d:p:")) != -1)
         {

@@ -1047,7 +1047,9 @@ int wsServe(WsServer* obj)
     unsigned int id = 0;
     _thread->Start(id);
 
-    char a = getchar();
+    while (TRUE) {
+        char a = getchar();
+    }
     return TRUE;
 }
 
