@@ -303,7 +303,7 @@ static void onMessage(WsHandler *ws, unsigned char *data, int len)
 
 static void onError(WsHandler *ws, char *msg)
 {
-    SdrServer *svr = (SdrServer *) ws->context;
+    WebSocket *conn = (WebSocket *) ws->context;
 //    SdrLib *sdr = svr->sdr;
 }
 
