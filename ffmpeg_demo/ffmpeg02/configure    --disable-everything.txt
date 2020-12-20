@@ -1,0 +1,237 @@
+./configure    --disable-everything \
+    --enable-decoder=h264 \
+    --enable-decoder=aac \
+    --enable-parser=aac \
+    --enable-parser=h264 \
+    --enable-demuxer=mp4 \
+    --enable-protocol=file \
+	--enable-demuxer=mov \
+	--enable-demuxer=m4a \
+	--enable-libopenjpeg \
+    --disable-doc \
+    --disable-ffplay \
+    --disable-ffprobe \
+    --disable-symver \
+    --disable-avresample \
+	--enable-encoder=mjpeg \
+	--enable-parser=mjpeg \
+	--enable-muxer=mjpeg \
+	--enable-encoder=rawvideo \
+	--enable-parser=rawvideo \
+	--enable-muxer=rawvideo \
+	--enable-videotoolbox \
+	--enable-encoder=h264_videotoolbox \
+	--enable-decoder=h264_videotoolbox \
+	--enable-parser=h264_videotoolbox \
+	--enable-muxer=h264_videotoolbox \
+	--enable-hwaccels
+
+#define FFMPEG_CONFIGURATION "--disable-everything --enable-decoder=videotoolbox --enable-decoder=h264 --enable-decoder=aac --enable-parser=aac --enable-parser=h264 --enable-demuxer=mp4 --enable-protocol=file --enable-demuxer=mov --enable-demuxer=m4a --enable-libopenjpeg --disable-doc --disable-ffplay --disable-ffprobe --disable-symver --disable-avresample --enable-encoder=mjpeg --enable-parser=mjpeg --enable-muxer=mjpeg --enable-encoder=rawvideo --enable-parser=rawvideo --enable-muxer=rawvideo --enable-videotoolbox --enable-encoder=h264_videotoolbox --enable-parser=h264_videotoolbox --enable-muxer=h264_videotoolbox --enable-hwaccels"
+
+Libraries:
+avcodec                 avfilter                avutil                  swscale
+avdevice                avformat                swresample
+
+Programs:
+ffmpeg
+
+Enabled decoders:
+aac                     h264                    mpeg1video              mpeg4
+h263                    hevc                    mpeg2video
+
+Enabled encoders:
+h264_videotoolbox       mjpeg                   rawvideo
+
+Enabled hwaccels:
+h263_videotoolbox       hevc_videotoolbox       mpeg2_videotoolbox
+h264_videotoolbox       mpeg1_videotoolbox      mpeg4_videotoolbox
+
+Enabled parsers:
+aac                     h263                    h264                    mjpeg                   mpeg4video
+
+
+    --enable-muxer=mpegvideo
+
+
+    --enable-small 
+
+
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/4.2.1 --enable-shared --enable-pthreads --enable-version3 --enable-avresample --cc=clang --host-cflags='-I/Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/include/darwin' --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libmp3lame --enable-libopus --enable-librubberband --enable-libsnappy --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librtmp --enable-libspeex --enable-videotoolbox --disable-libjack --disable-indev=jack --enable-libaom --enable-libsoxr
+
+
+ 文件大小	文件名称
+
+596.46K	libavcodec.a(h264qpel.o)
+521.49K	libavcodec.a(fft_float.o)
+205.31K	libavcodec.a(h264pred.o)
+111.17K	libavcodec.a(h264_mb.o)
+110.50K	libavcodec.a(h264_cavlc.o)
+106.02K	libavcodec.a(h264dsp.o)
+96.44K	libavcodec.a(cbrt_data.o)
+84.66K	libavformat.a(mov.o)
+80.62K	libavcodec.a(aacsbr.o)
+75.32K	libavcodec.a(aacdec.o)
+72.34K	libavcodec.a(aacps_float.o)
+70.25K	libavcodec.a(h264_cabac.o)
+68.51K	libavcodec.a(sinewin.o)
+68.30K	libavformat.a(utils.o)
+62.34K	libavcodec.a(aactab.o)
+44.32K	libavutil.a(pixdesc.o)
+38.66K	libavcodec.a(h264_loopfilter.o)
+38.27K	libavcodec.a(h264_qpel.o)
+37.70K	libavcodec.a(options.o)
+35.97K	libavcodec.a(codec_desc.o)
+35.54K	libavcodec.a(h264_slice.o)
+34.86K	libavutil.a(crc.o)
+34.66K	libavcodec.a(h264idct.o)
+21.87K	libavcodec.a(utils.o)
+21.84K	libavcodec.a(me_cmp.o)
+21.48K	libavutil.a(opt.o)
+21.11K	libavcodec.a(error_resilience.o)
+20.87K	libavcodec.a(simple_idct.o)
+20.19K	libavcodec.a(h264_intrapred.o)
+18.55K	libavcodec.a(decode.o)
+18.46K	 linker synthesized
+17.90K	libavcodec.a(h264_ps.o)
+16.79K	libavformat.a(aviobuf.o)
+16.48K	libavcodec.a(h264_deblock.o)
+14.88K	libavcodec.a(h264_refs.o)
+14.10K	libavutil.a(sha.o)
+13.81K	libavcodec.a(h264_direct.o)
+13.77K	libavcodec.a(h264_idct.o)
+13.47K	libavcodec.a(h264chroma.o)
+13.41K	libavformat.a(id3v2.o)
+13.15K	libavformat.a(mux.o)
+12.73K	libavcodec.a(h264dec.o)
+12.50K	libavcodec.a(h264_qpel_8bit.o)
+12.38K	libavutil.a(eval.o)
+12.09K	libavutil.a(aes.o)
+12.02K	libavcodec.a(h264_qpel_10bit.o)
+11.98K	libavformat.a(dump.o)
+10.65K	libavutil.a(parseutils.o)
+10.26K	libavcodec.a(h264_intrapred_10bit.o)
+9.83K	libavutil.a(frame.o)
+9.11K	libavcodec.a(h264_idct_10bit.o)
+9.04K	libavformat.a(options.o)
+8.85K	libavcodec.a(h264_deblock_10bit.o)
+8.75K	libavutil.a(imgutils.o)
+8.61K	libavcodec.a(me_cmp.o)
+8.29K	libavcodec.a(avpacket.o)
+8.06K	libavcodec.a(h264_chromamc.o)
+8.03K	libavcodec.a(pthread_frame.o)
+7.66K	libavcodec.a(fft.o)
+7.33K	libavcodec.a(h264_parser.o)
+7.15K	libavformat.a(avio.o)
+6.53K	libavcodec.a(h264_sei.o)
+6.52K	libavcodec.a(h264_parse.o)
+6.09K	libavutil.a(channel_layout.o)
+5.84K	libavcodec.a(h2645_parse.o)
+5.83K	libavcodec.a(bitstream.o)
+5.82K	libavformat.a(isom.o)
+5.55K	libavutil.a(log.o)
+5.28K	libavformat.a(network.o)
+5.18K	libavcodec.a(sbrdsp.o)
+5.17K	libavcodec.a(mdct15.o)
+5.14K	libavutil.a(mem.o)
+4.75K	libavutil.a(hwcontext.o)
+4.70K	libavutil.a(cpu.o)
+4.51K	libavformat.a(riff.o)
+4.27K	libavutil.a(float_dsp.o)
+4.15K	libavutil.a(avstring.o)
+4.01K	libavcodec.a(bsf.o)
+3.99K	libavcodec.a(encode.o)
+3.93K	libavutil.a(samplefmt.o)
+3.89K	libavutil.a(bprint.o)
+3.85K	libavformat.a(id3v1.o)
+3.74K	libavcodec.a(me_cmp_init.o)
+3.59K	libavcodec.a(mathtables.o)
+3.45K	libavformat.a(riffdec.o)
+3.39K	libavformat.a(mov_chan.o)
+3.35K	main.o
+3.31K	libavcodec.a(parser.o)
+3.28K	libavcodec.a(aacpsdsp_float.o)
+3.25K	libavformat.a(format.o)
+3.04K	libavcodec.a(videodsp.o)
+3.01K	libavcodec.a(videodsp.o)
+2.77K	libavcodec.a(profiles.o)
+2.75K	libavcodec.a(golomb.o)
+2.72K	libSystem.tbd
+2.55K	libavutil.a(error.o)
+2.49K	libavutil.a(buffer.o)
+2.45K	libavutil.a(dict.o)
+2.33K	libavformat.a(file.o)
+2.22K	libavcodec.a(raw.o)
+2.13K	libavcodec.a(mdct_float.o)
+2.12K	libavcodec.a(sbrdsp.o)
+2.12K	libavcodec.a(aacpsdsp.o)
+2.06K	libavcodec.a(h264_intrapred_init.o)
+2.05K	libavutil.a(encryption_info.o)
+2.02K	libavutil.a(timecode.o)
+1.98K	libavcodec.a(ac3tab.o)
+1.92K	libavcodec.a(h264_weight_10bit.o)
+1.90K	libavutil.a(mathematics.o)
+1.90K	libavcodec.a(h264_weight.o)
+1.88K	libavcodec.a(h264_chromamc_10bit.o)
+1.87K	libavutil.a(float_dsp.o)
+1.86K	libavutil.a(rational.o)
+1.84K	libavcodec.a(mpeg4audio.o)
+1.79K	libavutil.a(hwcontext_videotoolbox.o)
+1.75K	libavcodec.a(pthread_slice.o)
+1.73K	libavcodec.a(mdct15_init.o)
+1.67K	libavutil.a(slicethread.o)
+1.58K	libavcodec.a(cabac.o)
+1.53K	libavutil.a(utils.o)
+1.50K	libavcodec.a(h264dsp_init.o)
+1.49K	libavcodec.a(h264_picture.o)
+1.48K	libavformat.a(replaygain.o)
+1.47K	libavcodec.a(videodsp_init.o)
+1.40K	libavformat.a(qtpalette.o)
+1.32K	libavcodec.a(h264data.o)
+1.23K	libavcodec.a(fpel.o)
+1.22K	libavcodec.a(mdct15.o)
+1.11K	libavformat.a(url.o)
+1.10K	libavcodec.a(bitstream_filter.o)
+1.09K	libavcodec.a(allcodecs.o)
+1.06K	libavcodec.a(constants.o)
+1.05K	libavutil.a(aes_ctr.o)
+1.01K	libavcodec.a(mpegaudiodata.o)
+1.00K	libavutil.a(cpu.o)
+0.93K	libavformat.a(allformats.o)
+0.82K	libavutil.a(file_open.o)
+0.81K	libavcodec.a(qpel.o)
+0.72K	libavformat.a(metadata.o)
+0.65K	libavutil.a(stereo3d.o)
+0.65K	libavcodec.a(aac_ac3_parser.o)
+0.51K	libavcodec.a(kbdwin.o)
+0.50K	libavcodec.a(adts_header.o)
+0.49K	libavutil.a(display.o)
+0.45K	libavutil.a(spherical.o)
+0.41K	libavcodec.a(h264chroma_init.o)
+0.39K	libavcodec.a(pthread.o)
+0.38K	libavcodec.a(avpicture.o)
+0.38K	libavformat.a(protocols.o)
+0.37K	libavcodec.a(aac_parser.o)
+0.35K	libavcodec.a(bitstream_filters.o)
+0.33K	libavutil.a(float_dsp_init.o)
+0.28K	libavcodec.a(parsers.o)
+0.27K	libavutil.a(time.o)
+0.27K	libavutil.a(mastering_display_metadata.o)
+0.26K	CoreVideo.tbd
+0.25K	libavutil.a(reverse.o)
+0.25K	libavutil.a(log2_tab.o)
+0.22K	libavcodec.a(sbrdsp_init.o)
+0.16K	libavformat.a(mov_esds.o)
+0.15K	libavcodec.a(aacpsdsp_init.o)
+0.15K	libavcodec.a(startcode.o)
+0.14K	libavcodec.a(fft_init.o)
+0.13K	libavutil.a(imgutils_init.o)
+0.12K	libavcodec.a(null_bsf.o)
+0.08K	libavutil.a(imgutils.o)
+0.08K	libavformat.a(os_support.o)
+0.07K	libiconv.2.tbd
+0.06K	libavutil.a(cpuid.o)
+0.06K	libavutil.a(random_seed.o)
+0.02K	libz.tbd
+
+总大小: 3.29M
+ 
