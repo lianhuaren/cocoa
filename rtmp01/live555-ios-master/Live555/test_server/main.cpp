@@ -24,7 +24,7 @@ static void announceStream(RTSPServer* rtspServer, ServerMediaSession* sms,
                            char const* streamName, char const* inputFileName); // fwd
 
 
-int main(int argc, char** argv) {
+int abmain(int argc, char** argv) {
     // Begin by setting up our usage environment:
     // 1.创建任务调度器,createNew其实就是创建类的实例
     TaskScheduler* scheduler = BasicTaskScheduler::createNew();

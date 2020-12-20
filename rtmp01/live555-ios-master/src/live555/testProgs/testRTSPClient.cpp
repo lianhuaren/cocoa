@@ -68,16 +68,17 @@ int main(int argc, char** argv) {
   UsageEnvironment* env = BasicUsageEnvironment::createNew(*scheduler);
 
   // We need at least one "rtsp://" URL argument:
-  if (argc < 2) {
-    usage(*env, argv[0]);
-    return 1;
-  }
-
-  // There are argc-1 URLs: argv[1] through argv[argc-1].  Open and start streaming each one:
-  for (int i = 1; i <= argc-1; ++i) {
-    openURL(*env, argv[0], argv[i]);
-  }
-
+//  if (argc < 2) {
+//    usage(*env, argv[0]);
+//    return 1;
+//  }
+//
+//  // There are argc-1 URLs: argv[1] through argv[argc-1].  Open and start streaming each one:
+//  for (int i = 1; i <= argc-1; ++i) {
+//    openURL(*env, argv[0], argv[i]);
+//  }
+    openURL(*env, "test", "rtsp://127.0.0.1:8554/live/aa.mp4");
+    
   // All subsequent activity takes place within the event loop:
   env->taskScheduler().doEventLoop(&eventLoopWatchVariable);
     // This function call does not return, unless, at some point in time, "eventLoopWatchVariable" gets set to something non-zero.

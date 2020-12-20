@@ -693,32 +693,32 @@ Boolean MediaSubsession::initiate(int useSpecialRTPoffset) {
       // The sockets' port numbers were specified for us.  Use these:
       Boolean const protocolIsRTP = strcmp(fProtocolName, "RTP") == 0;
       if (protocolIsRTP && !fMultiplexRTCPWithRTP) {
-	fClientPortNum = fClientPortNum&~1;
+          fClientPortNum = fClientPortNum&~1;
 	    // use an even-numbered port for RTP, and the next (odd-numbered) port for RTCP
       }
       if (isSSM()) {
-	fRTPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, fClientPortNum);
+          fRTPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, fClientPortNum);
       } else {
-	fRTPSocket = new Groupsock(env(), tempAddr, fClientPortNum, 255);
+          fRTPSocket = new Groupsock(env(), tempAddr, fClientPortNum, 255);
       }
       if (fRTPSocket == NULL) {
-	env().setResultMsg("Failed to create RTP socket");
-	break;
+        env().setResultMsg("Failed to create RTP socket");
+        break;
       }
       
       if (protocolIsRTP) {
-	if (fMultiplexRTCPWithRTP) {
-	  // Use the RTP 'groupsock' object for RTCP as well:
-	  fRTCPSocket = fRTPSocket;
-	} else {
-	  // Set our RTCP port to be the RTP port + 1:
-	  portNumBits const rtcpPortNum = fClientPortNum|1;
-	  if (isSSM()) {
-	    fRTCPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, rtcpPortNum);
-	  } else {
-	    fRTCPSocket = new Groupsock(env(), tempAddr, rtcpPortNum, 255);
-	  }
-	}
+        if (fMultiplexRTCPWithRTP) {
+          // Use the RTP 'groupsock' object for RTCP as well:
+          fRTCPSocket = fRTPSocket;
+        } else {
+          // Set our RTCP port to be the RTP port + 1:
+          portNumBits const rtcpPortNum = fClientPortNum|1;
+          if (isSSM()) {
+            fRTCPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, rtcpPortNum);
+          } else {
+            fRTCPSocket = new Groupsock(env(), tempAddr, rtcpPortNum, 255);
+          }
+        }
       }
     } else {
       // Port numbers were not specified in advance, so we use ephemeral port numbers.
@@ -733,68 +733,68 @@ Boolean MediaSubsession::initiate(int useSpecialRTPoffset) {
       NoReuse dummy(env());
           // ensures that our new ephemeral port number won't be one that's already in use
 
-      while (1) {
-	// Create a new socket:
-	if (isSSM()) {
-	  fRTPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, 0);
-	} else {
-	  fRTPSocket = new Groupsock(env(), tempAddr, 0, 255);
-	}
-	if (fRTPSocket == NULL) {
-	  env().setResultMsg("MediaSession::initiate(): unable to create RTP and RTCP sockets");
-	  break;
-	}
+    while (1) {
+        // Create a new socket:
+        if (isSSM()) {
+          fRTPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, 0);
+        } else {
+          fRTPSocket = new Groupsock(env(), tempAddr, 0, 255);
+        }
+        if (fRTPSocket == NULL) {
+          env().setResultMsg("MediaSession::initiate(): unable to create RTP and RTCP sockets");
+          break;
+        }
 
-	// Get the client port number:
-	Port clientPort(0);
-	if (!getSourcePort(env(), fRTPSocket->socketNum(), clientPort)) {
-	  break;
-	}
-	fClientPortNum = ntohs(clientPort.num()); 
+        // Get the client port number:
+        Port clientPort(0);
+        if (!getSourcePort(env(), fRTPSocket->socketNum(), clientPort)) {
+          break;
+        }
+        fClientPortNum = ntohs(clientPort.num());
 
-	if (fMultiplexRTCPWithRTP) {
-	  // Use this RTP 'groupsock' object for RTCP as well:
-	  fRTCPSocket = fRTPSocket;
-	  success = True;
-	  break;
-	}	  
+        if (fMultiplexRTCPWithRTP) {
+          // Use this RTP 'groupsock' object for RTCP as well:
+          fRTCPSocket = fRTPSocket;
+          success = True;
+          break;
+        }
 
-	// To be usable for RTP, the client port number must be even:
-	if ((fClientPortNum&1) != 0) { // it's odd
-	  // Record this socket in our table, and keep trying:
-	  unsigned key = (unsigned)fClientPortNum;
-	  Groupsock* existing = (Groupsock*)socketHashTable->Add((char const*)key, fRTPSocket);
-	  delete existing; // in case it wasn't NULL
-	  continue;
-	}
+        // To be usable for RTP, the client port number must be even:
+        if ((fClientPortNum&1) != 0) { // it's odd
+          // Record this socket in our table, and keep trying:
+          unsigned key = (unsigned)fClientPortNum;
+          Groupsock* existing = (Groupsock*)socketHashTable->Add((char const*)key, fRTPSocket);
+          delete existing; // in case it wasn't NULL
+          continue;
+        }
 
-	// Make sure we can use the next (i.e., odd) port number, for RTCP:
-	portNumBits rtcpPortNum = fClientPortNum|1;
-	if (isSSM()) {
-	  fRTCPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, rtcpPortNum);
-	} else {
-	  fRTCPSocket = new Groupsock(env(), tempAddr, rtcpPortNum, 255);
-	}
-	if (fRTCPSocket != NULL && fRTCPSocket->socketNum() >= 0) {
-	  // Success! Use these two sockets.
-	  success = True;
-	  break;
-	} else {
-	  // We couldn't create the RTCP socket (perhaps that port number's already in use elsewhere?).
-	  delete fRTCPSocket; fRTCPSocket = NULL;
+        // Make sure we can use the next (i.e., odd) port number, for RTCP:
+        portNumBits rtcpPortNum = fClientPortNum|1;
+        if (isSSM()) {
+          fRTCPSocket = new Groupsock(env(), tempAddr, fSourceFilterAddr, rtcpPortNum);
+        } else {
+          fRTCPSocket = new Groupsock(env(), tempAddr, rtcpPortNum, 255);
+        }
+        if (fRTCPSocket != NULL && fRTCPSocket->socketNum() >= 0) {
+          // Success! Use these two sockets.
+          success = True;
+          break;
+        } else {
+          // We couldn't create the RTCP socket (perhaps that port number's already in use elsewhere?).
+          delete fRTCPSocket; fRTCPSocket = NULL;
 
-	  // Record the first socket in our table, and keep trying:
-	  unsigned key = (unsigned)fClientPortNum;
-	  Groupsock* existing = (Groupsock*)socketHashTable->Add((char const*)key, fRTPSocket);
-	  delete existing; // in case it wasn't NULL
-	  continue;
-	}
-      }
+          // Record the first socket in our table, and keep trying:
+          unsigned key = (unsigned)fClientPortNum;
+          Groupsock* existing = (Groupsock*)socketHashTable->Add((char const*)key, fRTPSocket);
+          delete existing; // in case it wasn't NULL
+          continue;
+        }
+    }
 
       // Clean up the socket hash table (and contents):
       Groupsock* oldGS;
       while ((oldGS = (Groupsock*)socketHashTable->RemoveNext()) != NULL) {
-	delete oldGS;
+          delete oldGS;
       }
       delete socketHashTable;
 

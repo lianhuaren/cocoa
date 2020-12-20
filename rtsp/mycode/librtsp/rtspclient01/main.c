@@ -11,7 +11,7 @@
 #include "rtsp-client.h"
 #include <assert.h>
 #include <stdlib.h>
-//#include "rtp-socket.h"
+#include "rtp-socket.h"
 //#include "cstringext.h"
 //#include "sys/system.h"
 //#include "cpm/unuse.h"

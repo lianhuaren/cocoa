@@ -388,6 +388,7 @@
 		7540AF491AB771CC0071A5FB /* strDup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7540ADDC1AB771C00071A5FB /* strDup.cpp */; };
 		7540AF4A1AB771CC0071A5FB /* UsageEnvironment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7540ADDD1AB771C00071A5FB /* UsageEnvironment.cpp */; };
 		DBE19F1F14ABB5CC000A8D99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE19F1E14ABB5CC000A8D99 /* Foundation.framework */; };
+		F38A9BA6258F2C05005A7AAA /* testRTSPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F38A9BA5258F2C05005A7AAA /* testRTSPClient.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -804,6 +805,7 @@
 		DBE19F1B14ABB5CC000A8D99 /* libLive555.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLive555.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE19F1E14ABB5CC000A8D99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBE19F2214ABB5CC000A8D99 /* Live555-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Live555-Prefix.pch"; sourceTree = "<group>"; };
+		F38A9BA5258F2C05005A7AAA /* testRTSPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = testRTSPClient.cpp; path = ../../src/live555/testProgs/testRTSPClient.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -829,6 +831,7 @@
 		2F4103BF22FDAED3008AF999 /* test_server */ = {
 			isa = PBXGroup;
 			children = (
+				F38A9BA5258F2C05005A7AAA /* testRTSPClient.cpp */,
 				2F4103C022FDAED3008AF999 /* main.cpp */,
 			);
 			path = test_server;
@@ -1632,6 +1635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4103C122FDAED3008AF999 /* main.cpp in Sources */,
+				F38A9BA6258F2C05005A7AAA /* testRTSPClient.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

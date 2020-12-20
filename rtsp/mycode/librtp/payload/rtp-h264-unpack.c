@@ -213,7 +213,7 @@ static int rtp_h264_unpack_fu(struct rtp_decode_h264_t *unpacker, const uint8_t*
 
 	fuheader = ptr[1];
     
-    printf("fuheader --> %x\n", fuheader);
+//    printf("fuheader --> %x\n", fuheader);
     
 	//don = nbo_r16(ptr + 2);
 	if (FU_START(fuheader))
