@@ -110,26 +110,26 @@
 		F34815BA2599602200628A80 /* MYGPUImage */ = {
 			isa = PBXGroup;
 			children = (
-				F34815BB2599602200628A80 /* GPUImageView.h */,
-				F34815BC2599602200628A80 /* GPUImageColorConversion.h */,
-				F34815BD2599602200628A80 /* GPUImageContext.m */,
-				F34815BE2599602200628A80 /* GPUImageVideoCamera.h */,
-				F34815BF2599602200628A80 /* GLProgram.m */,
-				F34815C02599602200628A80 /* GPUImageOutput.m */,
-				F34815C12599602200628A80 /* LFLiveVideoConfiguration.m */,
-				F34815C22599602200628A80 /* GPUImageFramebuffer.m */,
-				F34815C32599602200628A80 /* GPUImageFilter.h */,
-				F34815C42599602200628A80 /* GPUImageFramebufferCache.m */,
-				F34815C52599602200628A80 /* GPUImageContext.h */,
-				F34815C62599602200628A80 /* GPUImageColorConversion.m */,
-				F34815C72599602200628A80 /* GPUImageView.m */,
-				F34815C82599602200628A80 /* GPUImageVideoCamera.m */,
-				F34815C92599602200628A80 /* GPUImageFramebufferCache.h */,
-				F34815CA2599602200628A80 /* GPUImageFramebuffer.h */,
-				F34815CB2599602200628A80 /* GPUImageFilter.m */,
-				F34815CC2599602200628A80 /* LFLiveVideoConfiguration.h */,
-				F34815CD2599602200628A80 /* GPUImageOutput.h */,
 				F34815CE2599602200628A80 /* GLProgram.h */,
+				F34815BF2599602200628A80 /* GLProgram.m */,
+				F34815BC2599602200628A80 /* GPUImageColorConversion.h */,
+				F34815C62599602200628A80 /* GPUImageColorConversion.m */,
+				F34815C52599602200628A80 /* GPUImageContext.h */,
+				F34815BD2599602200628A80 /* GPUImageContext.m */,
+				F34815C32599602200628A80 /* GPUImageFilter.h */,
+				F34815CB2599602200628A80 /* GPUImageFilter.m */,
+				F34815CA2599602200628A80 /* GPUImageFramebuffer.h */,
+				F34815C22599602200628A80 /* GPUImageFramebuffer.m */,
+				F34815C92599602200628A80 /* GPUImageFramebufferCache.h */,
+				F34815C42599602200628A80 /* GPUImageFramebufferCache.m */,
+				F34815CD2599602200628A80 /* GPUImageOutput.h */,
+				F34815C02599602200628A80 /* GPUImageOutput.m */,
+				F34815BE2599602200628A80 /* GPUImageVideoCamera.h */,
+				F34815C82599602200628A80 /* GPUImageVideoCamera.m */,
+				F34815BB2599602200628A80 /* GPUImageView.h */,
+				F34815C72599602200628A80 /* GPUImageView.m */,
+				F34815CC2599602200628A80 /* LFLiveVideoConfiguration.h */,
+				F34815C12599602200628A80 /* LFLiveVideoConfiguration.m */,
 			);
 			path = MYGPUImage;
 			sourceTree = "<group>";
@@ -362,6 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7448PDV238;
 				INFOPLIST_FILE = MYGPUImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7448PDV238;
 				INFOPLIST_FILE = MYGPUImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

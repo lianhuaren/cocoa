@@ -83,14 +83,14 @@
     if (captureAsYUV && [GPUImageContext supportsFastTextureUpload])
     {
         BOOL supportsFullYUVRange = NO;
-        NSArray *supportedPixelFormats = videoOutput.availableVideoCVPixelFormatTypes;
-        for (NSNumber *currentPixelFormat in supportedPixelFormats)
-        {
-            if ([currentPixelFormat intValue] == kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)
-            {
-                supportsFullYUVRange = YES;
-            }
-        }
+//        NSArray *supportedPixelFormats = videoOutput.availableVideoCVPixelFormatTypes;
+//        for (NSNumber *currentPixelFormat in supportedPixelFormats)
+//        {
+//            if ([currentPixelFormat intValue] == kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)
+//            {
+//                supportsFullYUVRange = YES;
+//            }
+//        }
         
         if (supportsFullYUVRange)
         {
@@ -216,26 +216,26 @@
     CVImageBufferRef cameraFrame = CMSampleBufferGetImageBuffer(sampleBuffer);
     int bufferWidth = (int) CVPixelBufferGetWidth(cameraFrame);
     int bufferHeight = (int) CVPixelBufferGetHeight(cameraFrame);
-//    CFTypeRef colorAttachments = CVBufferGetAttachment(cameraFrame, kCVImageBufferYCbCrMatrixKey, NULL);
-//    if (colorAttachments != NULL)
-//    {
-//        if(CFStringCompare(colorAttachments, kCVImageBufferYCbCrMatrix_ITU_R_601_4, 0) == kCFCompareEqualTo)
-//        {
-//            if (isFullYUVRange)
-//            {
-//                _preferredConversion = kColorConversion601FullRange;
-//            }
-//            else
-//            {
-//                _preferredConversion = kColorConversion601;
-//            }
-//        }
-//        else
-//        {
-//            _preferredConversion = kColorConversion709;
-//        }
-//    }
-//    else
+    CFTypeRef colorAttachments = CVBufferGetAttachment(cameraFrame, kCVImageBufferYCbCrMatrixKey, NULL);
+    if (colorAttachments != NULL)
+    {
+        if(CFStringCompare(colorAttachments, kCVImageBufferYCbCrMatrix_ITU_R_601_4, 0) == kCFCompareEqualTo)
+        {
+            if (isFullYUVRange)
+            {
+                _preferredConversion = kColorConversion601FullRange;
+            }
+            else
+            {
+                _preferredConversion = kColorConversion601;
+            }
+        }
+        else
+        {
+            _preferredConversion = kColorConversion709;
+        }
+    }
+    else
     {
         if (isFullYUVRange)
         {
@@ -371,6 +371,12 @@
     glVertexAttribPointer(yuvConversionTextureCoordinateAttribute, 2, GL_FLOAT, 0, 0, [GPUImageFilter textureCoordinatesForRotation:internalRotation]);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    
+    
+    CGImageRef imageRef = [outputFramebuffer newCGImageFromFramebufferContents];
+    UIImage *image = [UIImage imageWithCGImage:imageRef];
+    NSLog(@"image:%@",image);
+    
 }
 
 - (void)updateTargetsForVideoCameraUsingCacheTextureAtWidth:(int)bufferWidth height:(int)bufferHeight time:(CMTime)currentTime;
