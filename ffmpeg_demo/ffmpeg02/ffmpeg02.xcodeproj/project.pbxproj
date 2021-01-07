@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F38A6AA2258CB375002A08FC /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F38A6AA1258CB375002A08FC /* main.c */; };
 		F38A6AAF258CB628002A08FC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6AAE258CB628002A08FC /* CoreVideo.framework */; };
 		F38A6AB2258CB657002A08FC /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6AB1258CB657002A08FC /* libiconv.2.tbd */; };
 		F38A6AB5258CB682002A08FC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6AB4258CB682002A08FC /* libz.tbd */; };
-		F38A6AD0258DBA72002A08FC /* hw_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = F38A6ACF258DBA72002A08FC /* hw_decode.c */; };
 		F38A6AD7258DC3B0002A08FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6AD6258DC3B0002A08FC /* Foundation.framework */; };
 		F38A6ADD258DC3C7002A08FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6ADC258DC3C7002A08FC /* AVFoundation.framework */; };
 		F38A6AE0258DC437002A08FC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6ADF258DC437002A08FC /* AudioToolbox.framework */; };
 		F38A6AE6258DC476002A08FC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6AE5258DC476002A08FC /* CoreMedia.framework */; };
 		F38A6AF2258DD19A002A08FC /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A6AD3258DC395002A08FC /* VideoToolbox.framework */; };
+		F3BA5B40259C7A7500AA16A3 /* X264EncoderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3BA5B3F259C7A7500AA16A3 /* X264EncoderTest.cpp */; };
+		F3BA5B6D259DCC6800AA16A3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F3BA5B6C259DCC6800AA16A3 /* main.c */; };
+		F3BA5B9025A29B4F00AA16A3 /* simplest_ffmpeg_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3BA5B8F25A29B4F00AA16A3 /* simplest_ffmpeg_decoder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,17 +34,20 @@
 
 /* Begin PBXFileReference section */
 		F38A6A9E258CB375002A08FC /* ffmpeg02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ffmpeg02; sourceTree = BUILT_PRODUCTS_DIR; };
-		F38A6AA1258CB375002A08FC /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F38A6AAE258CB628002A08FC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F38A6AB1258CB657002A08FC /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		F38A6AB4258CB682002A08FC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		F38A6ACF258DBA72002A08FC /* hw_decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hw_decode.c; sourceTree = "<group>"; };
 		F38A6AD3258DC395002A08FC /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		F38A6AD6258DC3B0002A08FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F38A6AD9258DC3BE002A08FC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		F38A6ADC258DC3C7002A08FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F38A6ADF258DC437002A08FC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F38A6AE5258DC476002A08FC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F3BA5B3F259C7A7500AA16A3 /* X264EncoderTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = X264EncoderTest.cpp; sourceTree = "<group>"; };
+		F3BA5B44259C840100AA16A3 /* libx264.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = libx264.c; path = ../../../../../day/webrtcgit/ffmpeg/libavcodec/libx264.c; sourceTree = "<group>"; };
+		F3BA5B6C259DCC6800AA16A3 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F3BA5B8F25A29B4F00AA16A3 /* simplest_ffmpeg_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_decoder.cpp; sourceTree = "<group>"; };
+		F3E66C94258F9E7400A5D882 /* rtpproto.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = rtpproto.c; path = ../../../../../day/webrtcgit/ffmpeg/libavformat/rtpproto.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,11 @@
 		F38A6AA0258CB375002A08FC /* ffmpeg02 */ = {
 			isa = PBXGroup;
 			children = (
-				F38A6AA1258CB375002A08FC /* main.c */,
-				F38A6ACF258DBA72002A08FC /* hw_decode.c */,
+				F3BA5B8F25A29B4F00AA16A3 /* simplest_ffmpeg_decoder.cpp */,
+				F3BA5B6C259DCC6800AA16A3 /* main.c */,
+				F3E66C94258F9E7400A5D882 /* rtpproto.c */,
+				F3BA5B3F259C7A7500AA16A3 /* X264EncoderTest.cpp */,
+				F3BA5B44259C840100AA16A3 /* libx264.c */,
 			);
 			path = ffmpeg02;
 			sourceTree = "<group>";
@@ -163,8 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38A6AA2258CB375002A08FC /* main.c in Sources */,
-				F38A6AD0258DBA72002A08FC /* hw_decode.c in Sources */,
+				F3BA5B6D259DCC6800AA16A3 /* main.c in Sources */,
+				F3BA5B40259C7A7500AA16A3 /* X264EncoderTest.cpp in Sources */,
+				F3BA5B9025A29B4F00AA16A3 /* simplest_ffmpeg_decoder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +304,8 @@
 					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libavfilter/libavfilter.a\"",
 					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libswresample/libswresample.a\"",
 					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libavdevice/libavdevice.a\"",
+					"\"/usr/local/Cellar/x264/r2917/lib/libx264.a\"",
+					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libswscale/libswscale.a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = /Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg;
@@ -316,6 +326,8 @@
 					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libavfilter/libavfilter.a\"",
 					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libswresample/libswresample.a\"",
 					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libavdevice/libavdevice.a\"",
+					"\"/usr/local/Cellar/x264/r2917/lib/libx264.a\"",
+					"\"/Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg/libswscale/libswscale.a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = /Users/yanjun/Desktop/lbb/day/webrtcgit/ffmpeg;

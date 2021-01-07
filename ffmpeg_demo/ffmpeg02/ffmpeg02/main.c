@@ -54,64 +54,65 @@ static int MyWriteJPEG(AVFrame* pFrame, int width, int height, int iIndex)
     }
 
     FILE* file =fopen("/Users/yanjun/Desktop/lbb/day/webrtcgit/input/tupian/YUV420P.yuv", "w");
-//
-//    int i;
-//    for (i = 0; i<height; i++)
-//    {
-//        fwrite(pFrame->data[0]+i*pFrame->linesize[0] , 1, width, file);
-//    }
-//    for (i = 0; i<height / 2; i++)
-//    {
-//        fwrite(pFrame->data[1]+i*pFrame->linesize[1] , 1, width/2, file);
-//
-//    }
-//    for (i = 0; i<height / 2; i++)
-//    {
-//        fwrite(pFrame->data[2]+i*pFrame->linesize[2] , 1, width/2, file);
-//    }
-//
+
+    int i;
+    for (i = 0; i<height; i++)
     {
-        int y_size = width * height;
-         
-         
-        //Encode
-        // 给AVPacket分配足够大的空间
-        AVPacket pkt;
-        av_new_packet(&pkt, y_size * 3);
-        
-        int size = av_image_get_buffer_size(pFrame->format, width, height, 1);
-        
-        int ret = 0;
-        if ((ret = av_image_copy_to_buffer(pkt.data, pkt.size,
-                                           (const uint8_t **)pFrame->data, pFrame->linesize,
-                                           pFrame->format,
-                                           pFrame->width, pFrame->height, 1)) < 0)
-            return ret;
-        fwrite(pkt.data , 1, size, file);
+        fwrite(pFrame->data[0]+i*pFrame->linesize[0] , 1, width, file);
     }
-    
+    for (i = 0; i<height / 2; i++)
+    {
+        fwrite(pFrame->data[1]+i*pFrame->linesize[1] , 1, width/2, file);
+
+    }
+    for (i = 0; i<height / 2; i++)
+    {
+        fwrite(pFrame->data[2]+i*pFrame->linesize[2] , 1, width/2, file);
+    }
+
+//    {
+//        int y_size = width * height;
+//
+//
+//        //Encode
+//        // 给AVPacket分配足够大的空间
+//        AVPacket pkt;
+//        av_new_packet(&pkt, y_size * 3);
+//
+//        int size = av_image_get_buffer_size(pFrame->format, width, height, 1);
+//
+//        int ret = 0;
+//        if ((ret = av_image_copy_to_buffer(pkt.data, pkt.size,
+//                                           (const uint8_t **)pFrame->data, pFrame->linesize,
+//                                           pFrame->format,
+//                                           pFrame->width, pFrame->height, 1)) < 0)
+//            return ret;
+//        fwrite(pkt.data , 1, size, file);
+//    }
+//
     fclose(file);
-    
+
+   
     int num = iIndex/25;
     // 输出文件路径
     char out_file[MAX_PATH] = {0};
-     
-//     sprintf(out_file,"/Users/yanjun/Desktop/lbb/day/webrtcgit/input/tupian/%d.pgm",iIndex);
 //
-//     pgm_save(pFrame->data[0], pFrame->linesize[0],
-//                      pFrame->width, pFrame->height, out_file);
+////     sprintf(out_file,"/Users/yanjun/Desktop/lbb/day/webrtcgit/input/tupian/%d.pgm",iIndex);
+////
+////     pgm_save(pFrame->data[0], pFrame->linesize[0],
+////                      pFrame->width, pFrame->height, out_file);
+////
 //
-    
-    return 0;
-      //sprintf_s(out_file, sizeof(out_file), "./%d.jpg",  iIndex);
-      sprintf(out_file, "/Users/yanjun/Desktop/lbb/day/webrtcgit/input/tupian/%d.yuv",  num);
+//    return 0;
+//      sprintf_s(out_file, sizeof(out_file), "./%d.jpg",  iIndex);
+      sprintf(out_file, "/Users/yanjun/Desktop/lbb/day/webrtcgit/input/tupian/%d.jpg",  num);
      
     // 分配AVFormatContext对象
     AVFormatContext* pFormatCtx = avformat_alloc_context();//avformat_alloc_context();
      
     // 设置输出文件格式
-//    pFormatCtx->oformat = av_guess_format("mjpeg", NULL, NULL);
-    pFormatCtx->oformat = av_guess_format("rawvideo", NULL, NULL);
+    pFormatCtx->oformat = av_guess_format("mjpeg", NULL, NULL);
+//    pFormatCtx->oformat = av_guess_format("rawvideo", NULL, NULL);
      
     // 创建并初始化一个和该url相关的AVIOContext
     if( avio_open(&pFormatCtx->pb, out_file, AVIO_FLAG_READ_WRITE) < 0)
@@ -218,7 +219,7 @@ int aamain(int argc,char* argv[])
     AVCodec *pCodec;
     AVFrame *pFrame, *pFrameRGB;
     struct SwsContext *pSwsCtx;
-    const char *filename = "/Users/yanjun/Desktop/lbb/day/webrtcgit/input/aa.mp4";
+    const char *filename = "/Users/yanjun/Desktop/lbb/day/webrtcgit/input/aa.mp4";//"/Users/yanjun/Desktop/lbb/day/webrtcgit/input/ac.h264";//"rtsp://127.0.0.1:8554/live/aa.mp4";//"/Users/yanjun/Desktop/lbb/day/webrtcgit/input/aa.mp4";
     AVPacket packet;
     int frameFinished;
     int PictureSize;
@@ -336,7 +337,7 @@ void Java_com_ffmpeg_VideoUtils_decode()
     //    //需要转码的视频文件(输入的视频文件)
 
     //1.注册所有主键
-//    av_register_all();
+    av_register_all();
     //封装格式上下文，统领全局的结构体，保存了视频文件封装格式的相关信息
     AVFormatContext *avFormatContext = avformat_alloc_context();
 
@@ -417,7 +418,7 @@ void Java_com_ffmpeg_VideoUtils_decode()
 
     int got_picture, ret;
 
-    FILE *fp_yuv = fopen(output_cstr, "wb+");
+    FILE *fp_yuv = fopen(output_cstr, "wb");
 
     int frame_count = 0;
 
@@ -478,9 +479,9 @@ void Java_com_ffmpeg_VideoUtils_decode()
     avformat_free_context(avFormatContext);
 }
 
-int main(int argc, const char * argv[]) {
+int bbmain(int argc, const char * argv[]) {
     // insert code here...
-//    avcodec_register_all();
+
 //    Java_com_ffmpeg_VideoUtils_decode();
     aamain(argc,argv);
     
